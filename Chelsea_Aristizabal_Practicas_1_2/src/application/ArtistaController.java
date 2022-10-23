@@ -9,24 +9,25 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import registro.Artista;
 
 public class ArtistaController implements Initializable {
  
+    @FXML
+    private TextArea txtBiografia;
 
-	@FXML
-	private TextField txtNombre;
+    @FXML
+    private TextField txtCompany;
 
-	@FXML
-	private TextField txtEmail;
+    @FXML
+    private TextField txtEmail;
 
-	@FXML
-	private TextField txtCompany;
+    @FXML
+    private TextField txtNombreArtistico;
 
-	@FXML
-	private TextField txtBiografia;
 	
 	@FXML
     private Button btnGuardar;
@@ -44,6 +45,7 @@ public class ArtistaController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+	  
 
 	}
 	//Voy a inicializar los atributos
@@ -53,7 +55,7 @@ public class ArtistaController implements Initializable {
 	
     @FXML
     public void guardar(ActionEvent event) {
-    	String nombreArtistico= this.txtNombre.getText();
+    	String nombreArtistico= this.txtNombreArtistico.getText();
     	String email=this.txtEmail.getText();
     	String company=this.txtCompany.getText();
     	String biografia=this.txtBiografia.getText();

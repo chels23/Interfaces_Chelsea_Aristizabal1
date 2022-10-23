@@ -48,7 +48,7 @@
          <children>
             <TableView fx:id="tblArtista" layoutX="85.0" layoutY="68.0" prefHeight="304.0" prefWidth="412.0">
               <columns>
-                <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                <TableColumn fx:id="colNombreArtistico" prefWidth="75.0" text="Nombre" />
                 <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email" />
                   <TableColumn fx:id="colCompany" prefWidth="75.0" text="Company" />
                   <TableColumn fx:id="colBiografia" prefWidth="75.0" text="Biografia" />
