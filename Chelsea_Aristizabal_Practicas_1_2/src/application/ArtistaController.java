@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -37,6 +39,16 @@ public class ArtistaController implements Initializable {
     
     private Artista artista;
     
+    @FXML
+    private ComboBox<String> combo1;
+    
+    @FXML
+    private ChoiceBox<String> choice1;
+    
+    
+    
+    
+    
     private ObservableList<Artista> artistas;
 	
 
@@ -45,7 +57,13 @@ public class ArtistaController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-	  
+		// Controles de JavaFX a los que se añaden directamente los items
+		 combo1.getItems().addAll("España", "Combo2", "Combo3",
+		"Combo4", "Combo5", "Combo6", "Combo7", "Combo8", "Combo9");
+		 
+		 choice1.getItems().addAll("Combo1", "Combo2", "Combo3",
+					"Combo4", "Combo5", "Combo6", "Combo7", "Combo8", "Combo9");
+		 choice1.setValue("Selecciona Género Musical...");
 
 	}
 	//Voy a inicializar los atributos
@@ -79,6 +97,10 @@ public class ArtistaController implements Initializable {
 
     @FXML
     public void salir(ActionEvent event) {
+    	this.artista=null;
+    	//Cerrar Ventana
+    	Stage stage =(Stage) this.btnGuardar.getScene().getWindow();
+    	stage.close();
 
     }
 	public Artista getArtista() {

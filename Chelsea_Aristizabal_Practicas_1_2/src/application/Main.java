@@ -6,7 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
+
 import javafx.stage.Stage;
 
 public class Main extends Application{
@@ -30,6 +30,7 @@ public class Main extends Application{
 	
 			// Mostramos la escena del BorderPane de la variable rootLayot
 			Scene scene = new Scene(rootLayout);
+			
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("CloudsMusic");
 			primaryStage.show();
