@@ -134,7 +134,7 @@
                   </Label>
                   <TextField fx:id="txtCompany" layoutX="378.0" layoutY="202.0" prefHeight="25.0" prefWidth="210.0" />
                   <FlowPane prefHeight="200.0" prefWidth="200.0" />
-                  <ChoiceBox fx:id="choice1" layoutX="374.0" layoutY="266.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choice1" layoutX="374.0" layoutY="266.0" prefHeight="25.0" prefWidth="234.0" />
                   <Label layoutX="375.0" layoutY="238.0" text="Género Musical">
                      <font>
                         <Font name="System Bold" size="12.0" />

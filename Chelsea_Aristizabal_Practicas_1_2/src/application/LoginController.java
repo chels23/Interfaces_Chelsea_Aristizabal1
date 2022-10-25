@@ -6,9 +6,11 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 
 public class LoginController{
@@ -35,14 +37,20 @@ public class LoginController{
     public void Ingresar(ActionEvent event) throws IOException {
     	// Cargo la vista
     	try {
-    	
+    	Node source =(Node) event.getSource();
+    	Stage stage= (Stage) source.getScene().getWindow();
 			// Cargamos el ARCHIVO
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MenuController.class.getResource("/view/MenuPantalla.fxml"));
-			BorderPane listadoControles = (BorderPane) loader.load();
-
+			rootLayout = (BorderPane) loader.load();
+			stage.setTitle("Menu");
+			MenuController menuCon = loader.getController();
+			menuCon.setRoot1(rootLayout);
+			 Scene scene = new Scene(rootLayout);
+			 stage.setScene(scene);
+			 stage.show();
 			// Se sitúa en el centro del diseño principal
-			rootLayout.setCenter(listadoControles);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

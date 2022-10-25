@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
@@ -7,39 +9,119 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <TabPane prefHeight="600.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="Ayuda Usuario 1">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <GridPane layoutX="75.0" layoutY="71.0" prefHeight="405.0" prefWidth="600.0">
+                        <GridPane layoutX="58.0" layoutY="76.0" prefHeight="446.0" prefWidth="632.0">
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="215.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="185.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="219.0" minHeight="10.0" prefHeight="219.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="197.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <Text layoutX="59.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio de sesión" />
                                     <ImageView layoutX="76.0" layoutY="24.0">
                                        <image>
                                           <Image url="@../../../../../../../Downloads/settings_account_box_FILL0_wght400_GRAD0_opsz48.png" />
                                        </image>
                                     </ImageView>
+                                    <Text layoutX="69.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio de sesión" />
                                  </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="217.0" prefWidth="223.0" style="-fx-background-color: #D9E2DE; -fx-border-color: #507882; -fx-border-width: 4;">
+                                 <children>
+                                    <Text layoutX="18.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="74.0" layoutY="32.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/settings_account_box_FILL0_wght400_GRAD0_opsz48.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="5.0" />
+                                 </GridPane.margin>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F0E9DF; -fx-border-color: #507882; -fx-border-width: 4;" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <ImageView layoutX="71.0" layoutY="37.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/menu_FILL0_wght400_GRAD0_opsz48.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="7.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="215.0" prefWidth="199.0" style="-fx-background-color: #D9E2DE; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.columnIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <ImageView layoutX="76.0" layoutY="35.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/add_circle_FILL0_wght400_GRAD0_opsz48.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="22.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="194.0" prefWidth="219.0" style="-fx-background-color: #F0E9DF; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <ImageView layoutX="75.0" layoutY="24.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/inventory_FILL0_wght400_GRAD0_opsz48.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="15.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="197.0" prefWidth="183.0" style="-fx-background-color: #D9E2DE; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView layoutX="74.0" layoutY="21.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/table_view_FILL0_wght400_GRAD0_opsz48.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="8.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="197.0" prefWidth="204.0" style="-fx-background-color: #F0E9DF; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView layoutX="75.0" layoutY="18.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/exit_to_app_FILL0_wght400_GRAD0_opsz48.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="9.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
                               </AnchorPane>
                            </children>
                         </GridPane>
@@ -47,9 +129,108 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
+          <Tab text="Ayuda Usuario 2">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane layoutX="98.0" layoutY="130.0" prefHeight="29.0" prefWidth="584.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Empresa" wrappingWidth="207.736328125">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comunidades" wrappingWidth="231.697265625">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enlaces útiles">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </FlowPane>
+                        <Text layoutX="98.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <VBox layoutX="98.0" layoutY="186.0" prefHeight="200.0" prefWidth="117.0">
+                           <children>
+                              <Hyperlink text="Acerca de">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink text="Empleo">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink text="For the Record">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="532.0" layoutY="189.0" prefHeight="125.0" prefWidth="150.0">
+                           <children>
+                              <Hyperlink text="Asistencia">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink text="App gratis para móvil">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="316.0" layoutY="186.0" prefHeight="130.0" prefWidth="111.0">
+                           <children>
+                              <Hyperlink text="Para Artistas">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink text="Desarrolladores">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink text="Publicidad">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink text="Inversores">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink text="Proveedores">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Hyperlink>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="509.0" layoutY="436.0">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/2048px-Instagram_icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="70.0" fitWidth="73.0" layoutX="558.0" layoutY="423.0">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/cropped-facebook-icon-preview-1-400x400.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="45.0" fitWidth="56.0" layoutX="638.0" layoutY="435.0">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/twitter.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
             </content>
           </Tab>
         </tabs>

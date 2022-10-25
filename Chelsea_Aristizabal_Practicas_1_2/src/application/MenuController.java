@@ -19,7 +19,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import registro.Artista;
@@ -27,9 +28,15 @@ import registro.Artista;
 
 public class MenuController implements Initializable{
 	
+	private BorderPane root1;
 	
-	
-    @FXML
+    public BorderPane getRoot1() {
+		return root1;
+	}
+	public void setRoot1(BorderPane root1) {
+		this.root1 = root1;
+	}
+	@FXML
     private Button btnAgregar;
     
     @FXML
@@ -64,6 +71,8 @@ public class MenuController implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		
 		
 		  
         
@@ -145,6 +154,20 @@ public class MenuController implements Initializable{
     		
     	}
 
+    }
+    @FXML
+    private void abrirManual(ActionEvent event) {    	
+    	try {
+			// Cargamos el archivo Controles Dinámicos
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(getClass().getResource("/view/ManualUsuario.fxml"));
+			BorderPane lis = (BorderPane) loader.load();
+
+			// Se sitúa en el centro del diseño principal
+			root1.setCenter(lis);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
 
 
