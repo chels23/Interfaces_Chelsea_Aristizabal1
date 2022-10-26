@@ -26,6 +26,7 @@ public class LoginController {
 
 	@FXML
 	public void Ingresar(ActionEvent event) throws IOException {
+
 		// Cargo la vista
 		try {
 			Node source = (Node) event.getSource();
@@ -35,7 +36,6 @@ public class LoginController {
 			loader.setLocation(MenuController.class.getResource("/view/MenuPantalla.fxml"));
 			rootLayout = (BorderPane) loader.load();
 			stage.setTitle("Menu");
-			
 			MenuController menuCon = loader.getController();
 			menuCon.setRoot1(rootLayout);
 			Scene scene = new Scene(rootLayout);
@@ -46,6 +46,29 @@ public class LoginController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+//		// Cargo la vista
+//		try {
+//			// Cargamos el ARCHIVO
+//			FXMLLoader loader = new FXMLLoader();
+//			// Cargamos el ARCHIVO
+//			Parent home =FXMLLoader.load(getClass().getResource("/view/MenuPantalla.fxml"));
+//			Scene homeScene = new Scene(home);
+//			Stage appstage=(Stage)((Node) event.getSource()).getScene().getWindow();
+//			appstage.setScene(homeScene);
+//			
+//			
+//			MenuController menuCon = loader.getController();
+//			menuCon.setRoot1(rootLayout);
+//			
+//			
+//			appstage.setTitle("Menu");
+//			
+//	
+//			
+//		
+//			appstage.show();
+//			// Se sitúa en el centro del diseño principal
 
 	}
 

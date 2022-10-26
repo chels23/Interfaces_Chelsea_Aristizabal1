@@ -1,54 +1,55 @@
 package registro;
 
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
+
 
 public class Discos {
 	
 
-	private SimpleStringProperty NombreDisco;
-	private SimpleIntegerProperty Precio;
-    private SimpleStringProperty Interprete;
-    private SimpleStringProperty Descripcion;
+	private String NombreDisco;
+	private Integer Precio;
+    private String Interprete;
+    private String Descripcion;
     
     public Discos(String sName, Integer iPrecio, String sInterprete, String sDescripcion) {
-        this.NombreDisco = new SimpleStringProperty(sName);
-        this.Precio= new SimpleIntegerProperty(iPrecio);
-        this.Interprete = new SimpleStringProperty(sInterprete);
-        this.Descripcion = new SimpleStringProperty(sDescripcion);
+        this.NombreDisco = sName;
+        this.Precio= iPrecio;
+        this.Interprete = sInterprete;
+        this.Descripcion = sDescripcion;
     }
 
-	public SimpleStringProperty getNombreDisco() {
+	public String getNombreDisco() {
 		return NombreDisco;
 	}
 
-	public void setNombreDisco(SimpleStringProperty nombreDisco) {
+	public void setNombreDisco(String nombreDisco) {
 		NombreDisco = nombreDisco;
 	}
 
-	public SimpleIntegerProperty getPrecio() {
+	public Integer getPrecio() {
 		return Precio;
 	}
 
-	public void setPrecio(SimpleIntegerProperty precio) {
+	public void setPrecio(Integer precio) {
 		Precio = precio;
 	}
 
-	public SimpleStringProperty getInterprete() {
+	public String getInterprete() {
 		return Interprete;
 	}
 
-	public void setInterprete(SimpleStringProperty interprete) {
+	public void setInterprete(String interprete) {
 		Interprete = interprete;
 	}
 
-	public SimpleStringProperty getDescripcion() {
+	public String getDescripcion() {
 		return Descripcion;
 	}
 
-	public void setDescripcion(SimpleStringProperty descripcion) {
+	public void setDescripcion(String descripcion) {
 		Descripcion = descripcion;
 	}
+
+
     
     
 

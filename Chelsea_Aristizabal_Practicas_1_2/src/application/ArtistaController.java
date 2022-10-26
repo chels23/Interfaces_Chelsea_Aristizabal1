@@ -28,7 +28,7 @@ public class ArtistaController implements Initializable {
     private TextField txtEmail;
 
     @FXML
-    private TextField txtNombreArtistico;
+    private TextField txtNombreArt;
 
 	
 	@FXML
@@ -73,7 +73,7 @@ public class ArtistaController implements Initializable {
 	
     @FXML
     public void guardar(ActionEvent event) {
-    	String nombreArtistico= this.txtNombreArtistico.getText();
+    	String nombreArtistico= this.txtNombreArt.getText();
     	String email=this.txtEmail.getText();
     	String company=this.txtCompany.getText();
     	String biografia=this.txtBiografia.getText();
@@ -90,14 +90,20 @@ public class ArtistaController implements Initializable {
     		
 			Stage stage=(Stage) this.btnGuardar.getScene().getWindow();
 			stage.close();
-		}
+		}else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("La persona ya existe");
+            alert.showAndWait();
+        }
     	
 
     }
 
     @FXML
     public void salir(ActionEvent event) {
-    	this.artista=null;
+    	
     	//Cerrar Ventana
     	Stage stage =(Stage) this.btnGuardar.getScene().getWindow();
     	stage.close();

@@ -17,8 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -26,7 +25,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import registro.Artista;
-import registro.Discos;
+
 
 public class MenuController implements Initializable {
 
@@ -53,42 +52,22 @@ public class MenuController implements Initializable {
 	@FXML
 	private Button btnAgregar;
 
-	@FXML
-	private TextField txtNombreArtistico;
+
+    @FXML
+    private TableColumn<Artista, String> colArt;
+
+
 
 	@FXML
-	private TextField txtEmail;
-
-	@FXML
-	private TextField txtCompany;
-
-	@FXML
-	private TextArea txtBiografia;
-
+	private TableColumn<Artista, String> colEmail;
 	@FXML
 	private TableColumn<Artista, String> colCompany;
 
 	@FXML
 	private TableColumn<Artista, String> colBiografia;
+	
 
-	@FXML
-	private TableColumn<Artista, String> colEmail;
 
-	@FXML
-	private TableColumn<Artista, String> colNombreArtistico;
-
-	// para segunda tabla
-	@FXML
-	private TableColumn<Artista, String> tbl2Company;
-
-	@FXML
-	private TableColumn<Artista, String> tbl2Biografia;
-
-	@FXML
-	private TableColumn<Artista, String> tbl2Email;
-
-	@FXML
-	private TableColumn<Artista, String> tbl2NombreArtistico;
 
 	// Tablas diferentes
 
@@ -97,37 +76,28 @@ public class MenuController implements Initializable {
 
 	private ObservableList<Artista> artistas;
 
-	@FXML
-	private TableView<Discos> tableDiscos;
-
-	@FXML
-	private TableColumn<Discos, String> colNombreDisco;
-	@FXML
-	private TableColumn<Discos, Integer> colPrecio;
-	@FXML
-	private TableColumn<Discos, String> colInterprete;
-	@FXML
-	private TableColumn<Discos, String> colDescripcion;
-
-
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+	
+		
+	
 
 
 		// ***********************************ARTISTAS********************************************************
-//
-//		// Tabla que se puede guardar los datos en la tbl Artistas
-//
-//		artistas = FXCollections.observableArrayList();
-//
-//		this.tblArtista.setItems(artistas);
-//
-//		// Hay que asociar los atributos con las columnas de la tabla
-//		this.colNombreArtistico.setCellValueFactory(new PropertyValueFactory<Artista, String>("NombreArtistico"));
-//		this.colEmail.setCellValueFactory(new PropertyValueFactory<Artista, String>("email"));
-//		this.colCompany.setCellValueFactory(new PropertyValueFactory<Artista, String>("company"));
-//		this.colBiografia.setCellValueFactory(new PropertyValueFactory<Artista, String>("biografia"));
+
+		// Tabla que se puede guardar los datos en la tbl Artistas
+
+		artistas = FXCollections.observableArrayList();
+
+		this.tblArtista.setItems(artistas);
+
+		// Hay que asociar los atributos con las columnas de la tabla
+		this.colArt.setCellValueFactory(new PropertyValueFactory<Artista, String>("NombreArtistico") );
+		this.colEmail.setCellValueFactory(new PropertyValueFactory<Artista, String>("email"));
+		this.colCompany.setCellValueFactory(new PropertyValueFactory<Artista, String>("company"));
+		this.colBiografia.setCellValueFactory(new PropertyValueFactory<Artista, String>("biografia"));
 
 	}
 
@@ -155,57 +125,77 @@ public class MenuController implements Initializable {
 			stage.setScene(scene);
 			stage.showAndWait();
 
-//			
-			
+			// cojo el artistadevuelta
+			Artista a = controlador.getArtista();
+			if (a != null) {
+
+				// Añado la persona
+				this.artistas.add(a);
+
+				// Refresco la tabla
+				this.tblArtista.refresh();
+			}
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+			alert.setHeaderText(null);
+			alert.setTitle("Error");
+			alert.setContentText("El artista existe");
+			alert.showAndWait();
 		}
-		}
-
-
 
 	
 
+		}
+
+
+
+
 	@FXML
-	private void abrirArtistas(ActionEvent event) {
-		// Cargamos el archivo
+	private void abrirArtistas(ActionEvent event) throws IOException {
+		// Cargamos el archivo Controles Dinámicos
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(LoginController.class.getResource("/view/MenuPantalla.fxml"));
+		loader.setLocation(getClass().getResource("/view/MenuPantalla.fxml"));
+	    AnchorPane root = (AnchorPane) loader.load();
+	    
+	
+	    root1.setCenter(root);
+	}
+
+	@FXML
+	private void abrirDiscos(ActionEvent event) throws IOException {
+		// Cargamos el archivo Controles Dinámicos
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("/view/Discos.fxml"));
+	    AnchorPane root = (AnchorPane) loader.load();
+	    
+	
+	    root1.setCenter(root);
+
+		
+//
+//		// Asociamos cada columna del TableView a una propiedad de la clase Person
+//		colNombreDisco.setCellValueFactory(new PropertyValueFactory<Discos, String>("NombreDisco"));
+//		colPrecio.setCellValueFactory(new PropertyValueFactory<Discos, Integer>("Precio"));
+//		colInterprete.setCellValueFactory(new PropertyValueFactory<Discos, String>("Interprete"));
+//		colDescripcion.setCellValueFactory(new PropertyValueFactory<Discos, String>("Descripcion"));
+//
+//		// Se rellena la tabla con objetos de la clase Person
+//		tableDiscos.setItems(data);
 
 	}
 
 	@FXML
-	private void abrirDiscos(ActionEvent event) {
-		try {
-			// Cargamos el archivo Controles Dinámicos
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("/view/Discos.fxml"));
-			AnchorPane lis = (AnchorPane) loader.load();
-
-			// Se sitúa en el centro del diseño principal
-			root1.setCenter(lis);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	void abrirUsuarios(ActionEvent event) throws IOException {
+		// Cargamos el archivo Controles Dinámicos
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("/view/Discos.fxml"));
+	    AnchorPane root = (AnchorPane) loader.load();
+	    
+	
+	    root1.setCenter(root);
 
 	
-	}
-
-	@FXML
-	void abrirUsuarios(ActionEvent event) {
-		try {
-			// Cargamos el archivo Controles Dinámicos
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("/view/Discos.fxml"));
-			AnchorPane lis = (AnchorPane) loader.load();
-
-			// Se sitúa en el centro del diseño principal
-			root1.setCenter(lis);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 
 	}
 
@@ -216,7 +206,6 @@ public class MenuController implements Initializable {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(getClass().getResource("/view/Bandas.fxml"));
 			AnchorPane lis = (AnchorPane) loader.load();
-			
 
 			// Se sitúa en el centro del diseño principal
 			root1.setCenter(lis);

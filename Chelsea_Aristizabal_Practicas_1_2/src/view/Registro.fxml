@@ -16,7 +16,6 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
@@ -61,7 +60,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="txtEmail" layoutX="40.0" layoutY="140.0" prefHeight="25.0" prefWidth="211.0" />
-                  <TextField fx:id="txtNombreArtistico" layoutX="40.0" layoutY="77.0" prefHeight="25.0" prefWidth="210.0" />
+                  <TextField fx:id="txtNombreArt" layoutX="40.0" layoutY="77.0" prefHeight="25.0" prefWidth="210.0" />
                   <HBox alignment="CENTER_RIGHT" layoutX="439.0" layoutY="424.0" prefHeight="25.0" prefWidth="221.0">
                      <children>
                         <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" prefHeight="32.0" prefWidth="100.0" text="Guardar" wrapText="true">
@@ -133,7 +132,6 @@
                      </font>
                   </Label>
                   <TextField fx:id="txtCompany" layoutX="378.0" layoutY="202.0" prefHeight="25.0" prefWidth="210.0" />
-                  <FlowPane prefHeight="200.0" prefWidth="200.0" />
                   <ChoiceBox fx:id="choice1" layoutX="374.0" layoutY="266.0" prefHeight="25.0" prefWidth="234.0" />
                   <Label layoutX="375.0" layoutY="238.0" text="Género Musical">
                      <font>
