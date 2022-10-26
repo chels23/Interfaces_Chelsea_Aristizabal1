@@ -197,14 +197,18 @@ public class MenuController implements Initializable {
 	}
 
 	@FXML
-	void abrirUsuarios(ActionEvent event) throws IOException {
-		// Cargamos el archivo Controles Dinámicos
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/view/Discos.fxml"));
-	    AnchorPane root = (AnchorPane) loader.load();
-	    
-	
-	    root1.setCenter(root);
+	void abrirUsuarios(ActionEvent event) {
+		try {
+			// Cargamos el archivo Controles Dinámicos
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MenuController.class.getResource("/view/Podcast.fxml"));
+			AnchorPane lisr = (AnchorPane) loader.load();
+
+			// Se sitúa en el centro del diseño principal
+			root1.setCenter(lisr);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	
 
@@ -215,7 +219,7 @@ public class MenuController implements Initializable {
 		try {
 			// Cargamos el archivo Controles Dinámicos
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("/view/Bandas.fxml"));
+			loader.setLocation(MenuController.class.getResource("/view/Bandas.fxml"));
 			AnchorPane lis = (AnchorPane) loader.load();
 
 			// Se sitúa en el centro del diseño principal

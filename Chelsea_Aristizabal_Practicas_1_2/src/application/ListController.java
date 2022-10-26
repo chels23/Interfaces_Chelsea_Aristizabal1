@@ -25,10 +25,19 @@ public class ListController {
 	// Lista auxiliar para TableView
 	private ObservableList<Discos> data = FXCollections.observableArrayList(
 			new Discos("Speak Now", 20, "Taylor Swift", "Su tercer disco, 'Speak Now', llegó en 2010 con singles como ‘Mean’, ‘Mine’ o ‘Back to December’, logrando vender millón y medio de copias en su primera"),
-			new Discos("Isabella", 23, "isabella.johnson@example.com", ""),
-			new Discos("Ethan", 33, "ethan.williams@example.com", ""),
-			new Discos("Emma", 45, "emma.jones@example.com", ""),
-			new Discos("Michael", 23, "michael.brown@example.com", ""));
+			new Discos(" Thriller", 23, "Michael Jackson", "La historia que relatan los versos es la de un chico que lleva al cine a su novia para ver una película de miedo"),
+			new Discos("The Dark Side of the Moon", 33, "Pink Floyd", ""),
+			new Discos("guardaespaldas", 45, "Whitney Houston", ""),
+			new Discos("Bat out of Hell", 45, "Meat Loaf", ""),
+			new Discos("Their Greatest Hits", 45, "Eagles", ""),
+			new Discos("Come On Over", 45, "Shania Twain", ""),
+			new Discos("Daydream", 45, "Mariah Carey ", ""),
+			new Discos("25", 45, "Adele", ""),
+			new Discos("Hybrid Theory", 45, "Linkin Park", ""),
+			new Discos("Back in Black", 23, "AC/DC", "")
+			
+			
+			);
 
 
 	
