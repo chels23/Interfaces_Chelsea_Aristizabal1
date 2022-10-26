@@ -3,8 +3,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -21,7 +23,7 @@
    <center>
       <TabPane prefHeight="600.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab text="Ayuda Usuario 1">
+          <Tab text="Ayuda Admin 1">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -160,7 +162,185 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Ayuda Usuario 2">
+            <Tab text="Menú Ayuda">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane layoutX="215.0" layoutY="14.0" prefHeight="189.0" prefWidth="527.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../Downloads/menuitems.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="188.0" fitWidth="324.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../Downloads/menuprincipal.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </FlowPane>
+                        <Text layoutX="26.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menú Principal ">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="16.0" layoutY="80.0" prefHeight="206.0" prefWidth="208.0" text="Cuando iniciamos sesión, &#10;esta ventana nos aparece.&#10;En la parte superior tenemos:&#10;Chat: No lleva ninguna ventana, &#10;pero su función es estar en linea &#10;con los compañeros y equipo&#10;de trabajo.&#10;Email: No lleva ninguna ventana, &#10;pero su función es conectarse con&#10;empresa mediante su correo&#10;" />
+                        <Text layoutX="26.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estadisticas">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="26.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayuda">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="249.0" fitWidth="326.0" layoutX="387.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/estadisticas.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea layoutX="26.0" layoutY="350.0" prefHeight="112.0" prefWidth="215.0" text="En esta parte muestra las diferentes&#10;estadisticas en varios grupos, podemos&#10;ver los albums mas escuchados o las &#10;canciones." />
+                        <Text layoutX="142.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esta ventana es donde nos encontramos actualmente" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Menú Lateral">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796" layoutX="5.0" layoutY="5.0" prefHeight="548.0" prefWidth="735.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="527.0" fitWidth="197.0" layoutX="1.0" layoutY="7.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/menulateral.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox layoutX="25.0" layoutY="59.0" prefHeight="245.0" prefWidth="94.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Artistas" wrappingWidth="94.13671875">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="100.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Discos" wrappingWidth="94.13671875">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="100.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bandas" wrappingWidth="94.13671875">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="100.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Podcast" wrappingWidth="94.13671875">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                    <TextArea layoutX="177.0" layoutY="47.0" prefHeight="83.0" prefWidth="294.0" text="Este botón contiene toda la información de artista &#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar.  Aqui solo funciona el botón de&#10;agregar&#10;" />
+                                    <TextArea layoutX="177.0" layoutY="170.0" prefHeight="83.0" prefWidth="294.0" text="Este botón contiene toda la información de Discos&#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar.  Los botones no hacen niguna &#10;función." />
+                                    <TextArea layoutX="177.0" layoutY="291.0" prefHeight="90.0" prefWidth="295.0" text="Este botón contiene toda la información de Podcast&#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar. " />
+                                    <TextArea layoutX="177.0" layoutY="404.0" prefHeight="83.0" prefWidth="289.0" text="Contiene información de los Podcast más escuchados&#10;este botón solo muestra información. Todavia no&#10;se ha creado tabla para incluir en la base de datos " />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="AgregarArtistas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="106.0" fitWidth="393.0" layoutX="327.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/agregarmas.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="273.0" fitWidth="386.0" layoutX="327.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/form3.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="21.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Botón Agregar" wrappingWidth="141.13671875">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="21.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formulario" wrappingWidth="141.13671875">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="21.0" layoutY="60.0" prefHeight="133.0" prefWidth="247.0" text="Para agregar un nuevo artista y que &#10;aparezca en la tabla hay que pulsar&#10;el botón +" />
+                        <TextArea layoutX="21.0" layoutY="312.0" prefHeight="133.0" prefWidth="247.0" text="Después aparecera un dialogo con el&#10;formulario " />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Guardar Formulario">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="275.0" fitWidth="371.0" layoutX="350.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/cambios.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="118.0" fitWidth="344.0" layoutX="353.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/guardado.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="149.0" fitWidth="347.0" layoutX="350.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/cambiotabla.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="32.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formulario" wrappingWidth="141.13671875">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="28.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mensaje de información" wrappingWidth="229.13671875">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="32.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Añadido en la tabla" wrappingWidth="197.13671875">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="32.0" layoutY="109.0" prefHeight="95.0" prefWidth="222.0" text="Añade solo los campos&#10;Nombre, Email, Company y Biografía" />
+                        <TextArea layoutX="29.0" layoutY="304.0" prefHeight="65.0" prefWidth="228.0" text="Te aparecera un mensaje de que se insertado&#10;los campos" />
+                        <TextArea layoutX="29.0" layoutY="450.0" prefHeight="86.0" prefWidth="229.0" text="Finalmente se añadió correctamente" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Ayuda Usuario ">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
