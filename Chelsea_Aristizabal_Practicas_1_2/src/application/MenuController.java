@@ -10,7 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -153,20 +153,31 @@ public class MenuController implements Initializable {
 
 	@FXML
 	private void abrirArtistas(ActionEvent event) throws IOException {
-		// Cargamos el archivo Controles Dinámicos
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/view/MenuPantalla.fxml"));
-	    AnchorPane root = (AnchorPane) loader.load();
-	    
-	
-	    root1.setCenter(root);
+		try {
+			Node source = (Node) event.getSource();
+			Stage stage = (Stage) source.getScene().getWindow();
+			// Cargamos el ARCHIVO
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MenuController.class.getResource("/view/MenuPantalla.fxml"));
+			root1 = (BorderPane) loader.load();
+			stage.setTitle("Menu");
+			MenuController menuCon = loader.getController();
+			menuCon.setRoot1(root1);
+			Scene scene = new Scene(root1);
+			stage.setScene(scene);
+			stage.show();
+			// Se sitúa en el centro del diseño principal
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@FXML
 	private void abrirDiscos(ActionEvent event) throws IOException {
 		// Cargamos el archivo Controles Dinámicos
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/view/Discos.fxml"));
+		loader.setLocation(MenuController.class.getResource("/view/Discos.fxml"));
 	    AnchorPane root = (AnchorPane) loader.load();
 	    
 	
@@ -241,5 +252,34 @@ public class MenuController implements Initializable {
 		}
 
 	}
+
+    @FXML
+    void abrirEstadistica(ActionEvent event) {
+		try {
+			// Cargo la vista
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Estadisticas.fxml"));
+
+			// Cargo la ventana
+			Parent root = loader.load();
+
+			// crear una escena que viene del padre
+			Scene scene = new Scene(root);
+			Stage stage = new Stage();
+
+			// Modal hasta que no termine con el formulario no me deja volver a la ventana
+			// anterior
+			stage.initModality(Modality.APPLICATION_MODAL);
+			stage.setScene(scene);
+			stage.showAndWait();
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+    }
+
+	
+	
 
 }

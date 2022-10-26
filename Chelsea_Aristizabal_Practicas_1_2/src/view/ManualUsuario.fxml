@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
@@ -53,6 +54,11 @@
                                           <Image url="@../../../../../../../Downloads/settings_account_box_FILL0_wght400_GRAD0_opsz48.png" />
                                        </image>
                                     </ImageView>
+                                    <Label layoutX="18.0" layoutY="24.0" prefHeight="32.0" prefWidth="11.0" text="1">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                                  <GridPane.margin>
                                     <Insets bottom="5.0" right="5.0" />
@@ -68,7 +74,12 @@
                                           <Image url="@../../../../../../../Downloads/menu_FILL0_wght400_GRAD0_opsz48.png" />
                                        </image>
                                     </ImageView>
-                                    <Text layoutX="7.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Text layoutX="8.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="El inicio de sesión es estático, cuando presiona al botón te lleva al menú principal, este contiene varios ítems donde puedes navegar entre ellos" textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Label layoutX="16.0" layoutY="28.0" text="2">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </AnchorPane>
                               <AnchorPane prefHeight="215.0" prefWidth="199.0" style="-fx-background-color: #D9E2DE; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.columnIndex="2">
@@ -81,7 +92,12 @@
                                           <Image url="@../../../../../../../Downloads/add_circle_FILL0_wght400_GRAD0_opsz48.png" />
                                        </image>
                                     </ImageView>
-                                    <Text layoutX="22.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Text layoutX="19.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si quieres añadir un nuevo Artista, hay un boton con el símbolo  + , al pulsarlo se abrirá un formulario." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Label layoutX="15.0" layoutY="31.0" text="3">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </AnchorPane>
                               <AnchorPane prefHeight="194.0" prefWidth="219.0" style="-fx-background-color: #F0E9DF; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.rowIndex="1">
@@ -94,7 +110,12 @@
                                           <Image url="@../../../../../../../Downloads/inventory_FILL0_wght400_GRAD0_opsz48.png" />
                                        </image>
                                     </ImageView>
-                                    <Text layoutX="15.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Text layoutX="15.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al abrir el formulario, te aparece varios espacios a rellenar, en esta caso añadimos solo: Nombre, Email, Compañía y Biografía para probar. Finalmente presionamos botón guardar." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Label layoutX="22.0" layoutY="28.0" text="4">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </AnchorPane>
                               <AnchorPane prefHeight="197.0" prefWidth="183.0" style="-fx-background-color: #D9E2DE; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -104,20 +125,30 @@
                                           <Image url="@../../../../../../../Downloads/table_view_FILL0_wght400_GRAD0_opsz48.png" />
                                        </image>
                                     </ImageView>
-                                    <Text layoutX="8.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Text layoutX="9.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al presionar el botón guardar nos saldrá una ventana avisando que se ha añadido correctamente y los datos se podrán visualizar en la tabla." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Label layoutX="17.0" layoutY="30.0" text="5">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                                  <GridPane.margin>
                                     <Insets right="5.0" />
                                  </GridPane.margin>
                               </AnchorPane>
-                              <AnchorPane prefHeight="197.0" prefWidth="204.0" style="-fx-background-color: #F0E9DF; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <AnchorPane prefHeight="192.0" prefWidth="217.0" style="-fx-background-color: #F0E9DF; -fx-border-color: #507882; -fx-border-width: 5;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <children>
                                     <ImageView layoutX="75.0" layoutY="18.0">
                                        <image>
                                           <Image url="@../../../../../../../Downloads/exit_to_app_FILL0_wght400_GRAD0_opsz48.png" />
                                        </image>
                                     </ImageView>
-                                    <Text layoutX="9.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Text layoutX="19.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En los demás items del la parte lateral, se pueden visualizar tablas estáticas de cada uno. Solo el botón artista puede añadir y guardar la información en la tabla." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
+                                    <Label layoutX="20.0" layoutY="29.0" text="6">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                                  <GridPane.margin>
                                     <Insets left="5.0" />

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <SplitPane dividerPositions="0.26588628762541805" prefHeight="400.0" prefWidth="611.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="142.0" style="-fx-background-color: #D3E2EF;">
+               <children>
+                  <ImageView layoutX="38.0" layoutY="150.0">
+                     <image>
+                        <Image url="@../../../../../../../Downloads/iconomus.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="27.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CloudsMusic">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane layoutX="-4.0" prefHeight="394.0" prefWidth="442.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Géneros Múśicales">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="310.0" fitWidth="392.0" layoutX="11.0" layoutY="32.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/image001.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Top 10 Canciones">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="279.0" fitWidth="406.0" layoutX="14.0" layoutY="107.0">
+                                       <image>
+                                          <Image url="@../../../../../../Escritorio/canciones.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#11722c" layoutX="52.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top 10  Canciones">
+                                       <font>
+                                          <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Álbumes Más Escuchados e">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="306.0" fitWidth="411.0" layoutX="2.0" layoutY="88.0">
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/albums.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#4e56a1" layoutX="66.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top 10  Álbums">
+                                       <font>
+                                          <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </left>
+</BorderPane>

@@ -1,32 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #D3E2EF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Accordion layoutX="68.0" layoutY="88.0">
+      <Accordion layoutX="350.0" layoutY="34.0">
         <panes>
-          <TitledPane animated="false" text="untitled 1">
+          <TitledPane animated="false" text="Banda más escuchada en los 90s" textFill="#1a51a4">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="175.0" fitWidth="174.0" layoutX="15.0" layoutY="3.0">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/61cFpRodanL._SL1118_.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
             </content>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
           </TitledPane>
-          <TitledPane animated="false" text="untitled 2">
+          <TitledPane animated="false" text="Banda más escuchada en los 00s" textFill="#1a51a4">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="176.0" fitWidth="184.0" layoutX="10.0" layoutY="2.0">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/coldplay.jpeg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
             </content>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
           </TitledPane>
-          <TitledPane animated="false" text="untitled 3">
+          <TitledPane animated="false" text="Banda más escuchada en los 80s" textFill="#3a49bf">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="164.0" fitWidth="200.0" layoutX="5.0" layoutY="5.0">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/queen.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
             </content>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
           </TitledPane>
         </panes>
       </Accordion>
-      <HBox layoutX="183.0" layoutY="113.0" prefHeight="100.0" prefWidth="200.0" />
+      <Text fill="#195a72" layoutX="29.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bandas">
+         <font>
+            <Font name="Bell MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <TableView layoutX="77.0" layoutY="344.0" prefHeight="200.0" prefWidth="493.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

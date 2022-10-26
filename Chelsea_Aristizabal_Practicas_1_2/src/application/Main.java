@@ -17,7 +17,7 @@ public class Main extends Application {
 
 			// Mostramos la escena del BorderPane de la variable rootLayot
 			Scene scene = new Scene(root);
-
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("CloudsMusic");
 			primaryStage.show();
