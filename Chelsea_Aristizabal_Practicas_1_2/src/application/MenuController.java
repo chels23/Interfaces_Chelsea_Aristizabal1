@@ -74,8 +74,15 @@ public class MenuController implements Initializable {
 	@FXML
 	private TableView<Artista> tblArtista;
 
-	private ObservableList<Artista> artistas;
 
+    // Lista auxiliar para TableView
+    private ObservableList<Artista> artistas = FXCollections.observableArrayList(
+    	    new Artista("Jacob", "Smith", "jacob.smith@example.com", ""),
+    	    new Artista("Isabella", "Johnson", "isabella.johnson@example.com", ""),
+    	    new Artista("Ethan", "Williams", "ethan.williams@example.com", ""),
+    	    new Artista("Emma", "Jones", "emma.jones@example.com", ""),
+    	    new Artista("Michael", "Brown", "michael.brown@example.com", "")
+    	);
 	
 
 	@Override
@@ -89,7 +96,6 @@ public class MenuController implements Initializable {
 
 		// Tabla que se puede guardar los datos en la tbl Artistas
 
-		artistas = FXCollections.observableArrayList();
 
 		this.tblArtista.setItems(artistas);
 
