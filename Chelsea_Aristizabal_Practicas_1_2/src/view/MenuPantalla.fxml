@@ -158,7 +158,7 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="btnEliminar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: FF8686;" textFill="#d0d0d0">
+                  <Button fx:id="btnEliminar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: FF8686;" textFill="#d0d0d0">
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="25.0">
                            <image>

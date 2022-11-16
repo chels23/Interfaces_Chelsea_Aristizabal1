@@ -205,7 +205,32 @@ public class MenuController implements Initializable {
 	 
 	    }
 
-
+	  @FXML
+	    private void eliminar(ActionEvent event) {
+	 
+	        Artista a = this.tblArtista.getSelectionModel().getSelectedItem();
+	 
+	        if (a == null) {
+	            Alert alert = new Alert(Alert.AlertType.ERROR);
+	            alert.setHeaderText(null);
+	            alert.setTitle("Error");
+	            alert.setContentText("Debes seleccionar una persona");
+	            alert.showAndWait();
+	        } else {
+	            // Elimino la persona
+	            this.artistas.remove(a);
+	            //this.filtroPersonas.remove(p);
+	            this.tblArtista.refresh();
+	 
+	            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+	            alert.setHeaderText(null);
+	            alert.setTitle("Info");
+	            alert.setContentText("Persona eliminada");
+	            alert.showAndWait();
+	 
+	        }
+	 
+	    }
 
 	@FXML
 	private void abrirArtistas(ActionEvent event) throws IOException {
