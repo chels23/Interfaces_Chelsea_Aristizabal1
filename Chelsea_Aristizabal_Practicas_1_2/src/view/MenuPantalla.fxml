@@ -134,7 +134,7 @@
          <children>
           <AnchorPane layoutX="44.0" layoutY="116.0" minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="535.0">
                <children>
-                  <TableView fx:id="tblArtista" layoutX="-2.0" layoutY="5.0" prefHeight="153.0" prefWidth="486.0">
+                  <TableView fx:id="tblArtista" editable="true" layoutX="-2.0" layoutY="5.0" prefHeight="153.0" prefWidth="486.0">
                     <columns>
                       <TableColumn fx:id="colArt" prefWidth="127.0" text="NombreArtistico" />
                       <TableColumn fx:id="colEmail" prefWidth="98.0" text="Email" />
@@ -170,7 +170,7 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="btnEditar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="39.0" style="-fx-background-color: #9AAEFF;">
+                  <Button fx:id="btnEditar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#modificar" prefHeight="1.0" prefWidth="39.0" style="-fx-background-color: #9AAEFF;">
                      <graphic>
                         <ImageView fitHeight="26.0" fitWidth="27.0">
                            <image>

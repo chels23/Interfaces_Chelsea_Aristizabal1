@@ -19,8 +19,14 @@ public class Artista {
 	/*Atributos de la clase Artista*/
     private String NombreArtistico;
     private String email;
+    //private String genero;
+    //private String pais;
+    //private int añosIndustria;
+   // private String redesSociales;
     private String company;
+    //private String generomusical;
     private String biografia;
+    
 
     
     /*Constructor*/

@@ -1,18 +1,23 @@
 package application;
 
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import registro.Artista;
 
@@ -70,9 +75,20 @@ public class ArtistaController implements Initializable {
 	public void iniAttributtes(ObservableList<Artista> artistas) {
 		this.artistas=artistas;
 	}
+	   public void initAttributtes(ObservableList<Artista> artistas, Artista a) {
+	        this.artistas = artistas;
+	        this.artista = a;
+	        // cargo los datos de la persona
+	        this.txtNombreArt.setText(a.getNombreArtistico());
+	        this.txtEmail.setText(a.getEmail());
+	        this.txtCompany.setText(a.getCompany());
+	        this.txtBiografia.setText(a.getBiografia());
+	    }
+	 
 	
     @FXML
     public void guardar(ActionEvent event) {
+    	
     	String nombreArtistico= this.txtNombreArt.getText();
     	String email=this.txtEmail.getText();
     	String company=this.txtCompany.getText();
@@ -101,6 +117,8 @@ public class ArtistaController implements Initializable {
 
     }
 
+
+
     @FXML
     public void salir(ActionEvent event) {
     	
@@ -112,6 +130,7 @@ public class ArtistaController implements Initializable {
 	public Artista getArtista() {
 		return artista;
 	}
+
 
 
 	

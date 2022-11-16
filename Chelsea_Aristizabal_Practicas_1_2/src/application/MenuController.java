@@ -52,6 +52,9 @@ public class MenuController implements Initializable {
 	@FXML
 	private Button btnAgregar;
 
+    @FXML
+    private Button btnEditar;
+
 
     @FXML
     private TableColumn<Artista, String> colArt;
@@ -65,7 +68,7 @@ public class MenuController implements Initializable {
 
 	@FXML
 	private TableColumn<Artista, String> colBiografia;
-	
+	 private ObservableList<Artista> filtroArtista;
 
 
 
@@ -89,7 +92,8 @@ public class MenuController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 	
 		
-	
+
+ 
 
 
 		// ***********************************ARTISTAS********************************************************
@@ -153,7 +157,53 @@ public class MenuController implements Initializable {
 	
 
 		}
-
+	
+	  @FXML
+	    private void modificar(ActionEvent event) {
+	 
+	        Artista a = this.tblArtista.getSelectionModel().getSelectedItem();
+	 
+	        if (a == null) {
+	            Alert alert = new Alert(Alert.AlertType.ERROR);
+	            alert.setHeaderText(null);
+	            alert.setTitle("Error");
+	            alert.setContentText("Debes seleccionar una persona");
+	            alert.showAndWait();
+	        } else {
+	            try {
+	                // Cargo la vista
+	                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Registro.fxml"));
+	 
+	                // Cargo la ventana
+	                Parent root = loader.load();
+	 
+	                // Cojo el controlador
+	                ArtistaController controlador = loader.getController();
+	                controlador.initAttributtes(artistas, a);
+	                 
+	                // Creo el Scene
+	                Scene scene = new Scene(root);
+	                Stage stage = new Stage();
+	                stage.initModality(Modality.APPLICATION_MODAL);
+	                stage.setScene(scene);
+	                stage.showAndWait();
+	 
+	                // cojo la persona devuelta
+	                Artista aux = controlador.getArtista();
+	                if (aux != null) {
+	                    this.tblArtista.refresh();
+	                }
+	 
+	            } catch (IOException ex) {
+	                Alert alert = new Alert(Alert.AlertType.ERROR);
+	                alert.setHeaderText(null);
+	                alert.setTitle("Error");
+	                alert.setContentText(ex.getMessage());
+	                alert.showAndWait();
+	            }
+	        }
+	 
+	    }
 
 
 
