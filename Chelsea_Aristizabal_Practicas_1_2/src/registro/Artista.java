@@ -1,7 +1,10 @@
 package registro;
 
-
-
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.Slider;
 
 /**
  * 
@@ -19,87 +22,47 @@ public class Artista {
 	/*Atributos de la clase Artista*/
     private String NombreArtistico;
     private String email;
-    //private String genero;
-    //private String pais;
-    //private int añosIndustria;
-   // private String redesSociales;
+    //private RadioButton genero;
+    //private ComboBox pais;
+    
+    //private CheckBox redesSociales;
     private String company;
-    //private String generomusical;
+    //private ChoiceBox generomusical;
     private String biografia;
-    
-
-    
-    /*Constructor*/
-	public Artista(String nombreArtistico, String email, String company, String biografia) {
-		
-		this.NombreArtistico = nombreArtistico;
+	public Artista(String nombreArtistico, String email,String company, String biografia) {
+		super();
+		NombreArtistico = nombreArtistico;
 		this.email = email;
+		
 		this.company = company;
 		this.biografia = biografia;
 	}
-    
-
-
-    
-    /*Métodos*/
-    
-    
-    /*GETTERS AND SETTERS*/
-	
 	public String getNombreArtistico() {
 		return NombreArtistico;
 	}
-
-
-	public String getEmail() {
-		return email;
-	}
-
-
-	public String getCompany() {
-		return company;
-	}
-
-
-	public String getBiografia() {
-		return biografia;
-	}
-	
 	public void setNombreArtistico(String nombreArtistico) {
 		NombreArtistico = nombreArtistico;
 	}
-
-
-
-
+	public String getEmail() {
+		return email;
+	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
-
-
+	public String getCompany() {
+		return company;
+	}
 	public void setCompany(String company) {
 		this.company = company;
 	}
-
-
-
-
+	public String getBiografia() {
+		return biografia;
+	}
 	public void setBiografia(String biografia) {
 		this.biografia = biografia;
 	}
-
-
-
-
-
-
-	
-
-
     
-
 
     
  

@@ -1,5 +1,6 @@
 package application;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -10,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,8 +19,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -68,10 +71,11 @@ public class MenuController implements Initializable {
 
 	@FXML
 	private TableColumn<Artista, String> colBiografia;
-	 private ObservableList<Artista> filtroArtista;
+	 private ObservableList<Artista> filtroArtistas;
 
 
-
+	    @FXML
+	    private TextField txtFiltrarNombre;
 	// Tablas diferentes
 
 	@FXML
@@ -80,7 +84,7 @@ public class MenuController implements Initializable {
 
     // Lista auxiliar para TableView
     private ObservableList<Artista> artistas = FXCollections.observableArrayList(
-    	    new Artista("Jacob", "Smith", "jacob.smith@example.com", ""),
+    	    new Artista("Jorja Smith ", "jacob.smith@example.com", "jacob.smith@example.com", ""),
     	    new Artista("Isabella", "Johnson", "isabella.johnson@example.com", ""),
     	    new Artista("Ethan", "Williams", "ethan.williams@example.com", ""),
     	    new Artista("Emma", "Jones", "emma.jones@example.com", ""),
@@ -91,10 +95,14 @@ public class MenuController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 	
-		
+		 
 
- 
+        filtroArtistas=FXCollections.observableArrayList();
 
+		// Se cambia el tipo de cursor cuando nos posicionamos por encima
+		txtFiltrarNombre.setOnMouseEntered((event) -> {
+			txtFiltrarNombre.setCursor(Cursor.HAND);
+		});	
 
 		// ***********************************ARTISTAS********************************************************
 
@@ -128,6 +136,8 @@ public class MenuController implements Initializable {
 			// crear una escena que viene del padre
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
+			
+	    	
 
 			// Modal hasta que no termine con el formulario no me deja volver a la ventana
 			// anterior
@@ -231,6 +241,31 @@ public class MenuController implements Initializable {
 	        }
 	 
 	    }
+
+	    @FXML
+	    private void filtrarNombre(KeyEvent event) {
+	    	 String filtroNombre = this.txtFiltrarNombre.getText();
+	    	 
+		        // Si el texto del nombre esta vacio, seteamos la tabla de personas con el original
+		        if (filtroNombre.isEmpty()) {
+		            this.tblArtista.setItems(artistas);
+		        } else {
+		 
+		            // Limpio la lista
+		            this.filtroArtistas.clear();
+		 
+		            for (Artista a : this.artistas) {
+		                if (a.getNombreArtistico().toLowerCase().contains(filtroNombre.toLowerCase())) {
+		                    this.filtroArtistas.add(a);
+		                }
+		            }
+		 
+		            this.tblArtista.setItems(filtroArtistas);
+		 
+		        }
+		 
+	    }
+	  
 
 	@FXML
 	private void abrirArtistas(ActionEvent event) throws IOException {

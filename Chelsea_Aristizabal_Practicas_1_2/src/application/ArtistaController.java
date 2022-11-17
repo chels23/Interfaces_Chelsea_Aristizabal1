@@ -4,6 +4,9 @@ package application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import javafx.beans.property.StringProperty;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,8 +18,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.text.Text;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import registro.Artista;
@@ -49,14 +57,23 @@ public class ArtistaController implements Initializable {
     
     @FXML
     private ChoiceBox<String> choice1;
-    
-    
+    @FXML
+    private Text txtResultado;
+    @FXML
+    private ToggleGroup tg = new ToggleGroup();
     
     
     
     private ObservableList<Artista> artistas;
 	
-
+	// Listener para el campo de texto
+	InvalidationListener textListener = new InvalidationListener() {
+		@Override
+		public void invalidated(Observable observable) {
+			StringProperty sp = (StringProperty) observable;
+			System.out.println(observable.toString() + ", " + sp.get());				
+		}
+	};
 
 
 
@@ -69,6 +86,14 @@ public class ArtistaController implements Initializable {
 		 choice1.getItems().addAll("Pop", "Rock", "Jazz",
 					"R&B", "Electronic", "KPOP", "Salsa", "Bachata", "Blues");
 		 choice1.setValue("Selecciona Género Musical...");
+		 
+	       	 	
+	    	
+	    	// Cualquier nueva selección del usuario se registra en el texto de debajo
+	    	combo1.getSelectionModel().selectedItemProperty().addListener(
+	    		(observable, oldValue, newValue) -> {
+	    			txtResultado.setText("Antiguo -> " + oldValue + "\n" + "Nuevo -> " + newValue);
+	    		});   
 
 	}
 	//Voy a inicializar los atributos
@@ -87,12 +112,14 @@ public class ArtistaController implements Initializable {
 	 
 	
     @FXML
-    public void guardar(ActionEvent event) {
+    public boolean guardar(ActionEvent event) {
     	
     	String nombreArtistico= this.txtNombreArt.getText();
     	String email=this.txtEmail.getText();
     	String company=this.txtCompany.getText();
     	String biografia=this.txtBiografia.getText();
+    	
+    
     	
     	Artista a=new Artista(nombreArtistico,email, company, biografia);
     	
@@ -114,8 +141,37 @@ public class ArtistaController implements Initializable {
             alert.showAndWait();
         }
     	
+        String errorMessage = "";
+
+        if (txtNombreArt.getText() == null || txtNombreArt.getText().length() == 0) {
+            errorMessage += "El campo first name está vacío\n"; 
+        }
+        if (txtEmail.getText() == null || txtEmail.getText().length() == 0) {
+            errorMessage += "El campo last name está vacío\n"; 
+        }
+        if (txtCompany.getText() == null || txtCompany.getText().length() == 0) {
+            errorMessage += "El campo street está vacío\n"; 
+        }
+
+    
+
+        if (errorMessage.length() == 0) {
+            return true;
+        } else {
+        	// Se muestra un alert si no se puede eliminar la fila
+    		Alert errorAlert = new Alert(AlertType.ERROR);
+        	
+    		errorAlert.setTitle("Hay campos incorrectos");
+    		errorAlert.setHeaderText("Por favor, rellena correctamente los campos");
+    		errorAlert.setContentText(errorMessage);
+    		
+    		errorAlert.showAndWait();
+            return false;
+        }
+    
 
     }
+    
 
 
 
