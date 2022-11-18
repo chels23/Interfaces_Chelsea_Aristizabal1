@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -61,7 +62,8 @@ public class MenuController implements Initializable {
 
     @FXML
     private TableColumn<Artista, String> colArt;
-
+    @FXML
+    private TableColumn<Artista, RadioButton> colGenero;
 
 
 	@FXML
@@ -84,11 +86,16 @@ public class MenuController implements Initializable {
 
     // Lista auxiliar para TableView
     private ObservableList<Artista> artistas = FXCollections.observableArrayList(
-    	    new Artista("Jorja Smith ", "jacob.smith@example.com", "jacob.smith@example.com", ""),
-    	    new Artista("Isabella", "Johnson", "isabella.johnson@example.com", ""),
-    	    new Artista("Ethan", "Williams", "ethan.williams@example.com", ""),
-    	    new Artista("Emma", "Jones", "emma.jones@example.com", ""),
-    	    new Artista("Michael", "Brown", "michael.brown@example.com", "")
+    	    new Artista("Jorja Smith ",      "jacob.smith@example.com",    "RCA Records.", ""),
+    	    new Artista("Giveon",            "giveon.johnson@example.com", "Columbia Records (CBS)",""),
+    	    new Artista("Rihanna",           "ethan.williams@example.com", "MCA Records.", ""),
+    	    new Artista("Taylor Swift",      "emma.jones@example.com",      "PolyGram. ",""),
+    	    new Artista("Dijon",             "michael.brown@example.com", "WEA Music (ex Warner Bros Records)",""),
+    	    new Artista("Burna Boy",         "michael.brown@example.com", "Epic Records.",""),
+    	    new Artista("Jazmine Sullivan",  "michael.brown@example.com", "Island Records.",""),
+    	    new Artista("Snoh Aalegra",      "michael.brown@example.com",  "Universal Music Group",""),
+    	    new Artista("Kiana Ledé",        "michael.brown@example.com", "Warner Bros. Records","")
+    	    
     	);
 	
 
@@ -114,6 +121,7 @@ public class MenuController implements Initializable {
 		// Hay que asociar los atributos con las columnas de la tabla
 		this.colArt.setCellValueFactory(new PropertyValueFactory<Artista, String>("NombreArtistico") );
 		this.colEmail.setCellValueFactory(new PropertyValueFactory<Artista, String>("email"));
+
 		this.colCompany.setCellValueFactory(new PropertyValueFactory<Artista, String>("company"));
 		this.colBiografia.setCellValueFactory(new PropertyValueFactory<Artista, String>("biografia"));
 
@@ -121,7 +129,7 @@ public class MenuController implements Initializable {
 
 	@FXML
 	public void agregarPersona(ActionEvent event) {
-
+		tblArtista.setEditable(true);
 		try {
 			// Cargo la vista
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Registro.fxml"));
@@ -168,52 +176,62 @@ public class MenuController implements Initializable {
 
 		}
 	
-	  @FXML
-	    private void modificar(ActionEvent event) {
-	 
-	        Artista a = this.tblArtista.getSelectionModel().getSelectedItem();
-	 
-	        if (a == null) {
-	            Alert alert = new Alert(Alert.AlertType.ERROR);
-	            alert.setHeaderText(null);
-	            alert.setTitle("Error");
-	            alert.setContentText("Debes seleccionar una persona");
-	            alert.showAndWait();
-	        } else {
-	            try {
-	                // Cargo la vista
-	                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Registro.fxml"));
-	 
-	                // Cargo la ventana
-	                Parent root = loader.load();
-	 
-	                // Cojo el controlador
-	                ArtistaController controlador = loader.getController();
-	                controlador.initAttributtes(artistas, a);
-	                 
-	                // Creo el Scene
-	                Scene scene = new Scene(root);
-	                Stage stage = new Stage();
-	                stage.initModality(Modality.APPLICATION_MODAL);
-	                stage.setScene(scene);
-	                stage.showAndWait();
-	 
-	                // cojo la persona devuelta
-	                Artista aux = controlador.getArtista();
-	                if (aux != null) {
-	                    this.tblArtista.refresh();
-	                }
-	 
-	            } catch (IOException ex) {
-	                Alert alert = new Alert(Alert.AlertType.ERROR);
-	                alert.setHeaderText(null);
-	                alert.setTitle("Error");
-	                alert.setContentText(ex.getMessage());
-	                alert.showAndWait();
-	            }
-	        }
-	 
-	    }
+    @FXML
+    void modificar(ActionEvent event) {
+    	 Artista a = this.tblArtista.getSelectionModel().getSelectedItem();
+    	 
+         if (a == null) {
+             Alert alert = new Alert(Alert.AlertType.ERROR);
+             alert.setHeaderText(null);
+             alert.setTitle("Error");
+             alert.setContentText("Debes seleccionar una persona");
+             alert.showAndWait();
+         } else {
+  
+             try {
+  
+                 // Cargo la vista
+                 FXMLLoader loader = new FXMLLoader(getClass().
+                         getResource("/view/Registro.fxml"));
+  
+                 // Cargo la ventana
+                 Parent root = loader.load();
+  
+                 // Cojo el controlador
+                 ArtistaController controlador = loader.getController();
+                 controlador.initAttributtes(artistas, a);
+                
+                 // Creo el Scene
+                 Scene scene = new Scene(root);
+                 Stage stage = new Stage();
+                 stage.initModality(Modality.APPLICATION_MODAL);
+                 stage.setScene(scene);
+                 stage.showAndWait();
+                  
+                 // cojo la persona devuelta
+                 Artista aSeleccionado = controlador.getArtista();
+                 if (aSeleccionado != null) {
+                     if (!aSeleccionado.getNombreArtistico().toLowerCase().
+                             contains(this.txtFiltrarNombre.getText().toLowerCase())) {
+                         this.filtroArtistas.remove(aSeleccionado);
+                     }
+                     this.tblArtista.refresh();
+                 }
+  
+             } catch (IOException e) {
+                 Alert alert = new Alert(Alert.AlertType.ERROR);
+                 alert.setHeaderText(null);
+                 alert.setTitle("Error");
+                 alert.setContentText(e.getMessage());
+                 alert.showAndWait();
+             }
+  
+         }
+  
+
+    }
+	
+
 
 	  @FXML
 	    private void eliminar(ActionEvent event) {
