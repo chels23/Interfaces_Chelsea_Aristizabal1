@@ -16,7 +16,7 @@ public class EstadisticasController {
     @FXML
     private ProgressBar progressBar;
 	
-    private ArrayList<String> nombres = new ArrayList<String>();
+    private ArrayList<String> canciones = new ArrayList<String>();
     private static final int ITEMSPERPAGE = 5;
    
     
@@ -26,12 +26,12 @@ public class EstadisticasController {
     @FXML
     private void initialize() {   
     	// Se inicializa el listado
-    	this.initNombres(this.nombres);
+    	this.initCanciones(this.canciones);
     	
     	// Se calcula el número de páginas en función de los ítems del listado
     	// Si el número no es divisor del número de ítems, entonces se añade una página
-    	pagination.setPageCount((nombres.size() / ITEMSPERPAGE) + 
-    			(((nombres.size() % ITEMSPERPAGE) > 0)?1:0));
+    	pagination.setPageCount((canciones.size() / ITEMSPERPAGE) + 
+    			(((canciones.size() % ITEMSPERPAGE) > 0)?1:0));
     	    	    	
     	pagination.setPageFactory((Integer pageIndex) -> {
     		return createPage(pageIndex);   
@@ -54,10 +54,10 @@ public class EstadisticasController {
         int page = pageIndex * ITEMSPERPAGE;
         
         // Se recorren los ítems sumando el número de páginas, o el límite de ítems del listado
-        int limit = Math.min(page + ITEMSPERPAGE, nombres.size());
+        int limit = Math.min(page + ITEMSPERPAGE, canciones.size());
         for (int i = page; i < limit; i++) {
         	// Crea un Label con un nombre aleatorio
-            Label text = new Label( (i+1) + ".- " + nombres.get(i));
+            Label text = new Label( (i+1) + ".- " + canciones.get(i));
                
             // Se añade el label al VBox
             box.getChildren().add(text);           
@@ -66,25 +66,19 @@ public class EstadisticasController {
         return box;
     }
     
-    private void initNombres(ArrayList<String> nombres) {
-    	 nombres.add("Juan");
-    	 nombres.add("Carmen");
-    	 nombres.add("Maria");
-    	 nombres.add("Camila");
-    	 nombres.add("Pablo");
-    	 nombres.add("Cornelio");
-    	 nombres.add("Anibal");
-    	 nombres.add("Ruben");
-    	 nombres.add("Julio");
-    	 nombres.add("Manfred");
-    	 nombres.add("Ana");
-    	 nombres.add("Luis");
-    	 nombres.add("Luz");
-    	 nombres.add("Lucas");
-    	 nombres.add("Gretta");
-    	 nombres.add("Lauren");
-    	 nombres.add("Oscar");
-    	 nombres.add("James");
+    private void initCanciones (ArrayList<String> canciones) {
+    	canciones.add("La bachata Manuel Turizo ");
+    	canciones.add("I'm good (Blue) Bebe Rexha");
+    	canciones.add("Unholy Sam Smith");
+    	canciones.add("Anti-Hero Taylor Swift ");
+    	canciones.add("Rich Flex Drake");
+    	canciones.add("As it Was Harry Styles");
+    	canciones.add("Another Love Tom Odell");
+    	canciones.add("Golden Hour JVKE");
+    	canciones.add("CUFF IT Beyonce ");
+    	canciones.add("Monotonia Shakira");
+    	canciones.add("Die For You Joji");
+    	
     }
        
 }

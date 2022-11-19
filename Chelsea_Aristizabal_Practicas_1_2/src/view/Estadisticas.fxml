@@ -56,7 +56,7 @@
                                           <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                                        </font>
                                     </Text>
-                                    <Pagination fx:id="pagination" layoutX="92.0" layoutY="117.0" prefHeight="200.0" prefWidth="200.0" />
+                                    <Pagination fx:id="pagination" layoutX="92.0" layoutY="117.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../../../Downloads/Unidad3_EjerciciosEventos_Dialogos/Unidad3_EjerciciosEventos_Dialogos/src/pagination/EstilosPaginacion.css" />
                                     <ProgressBar fx:id="progressBar" layoutX="107.0" layoutY="329.0" prefWidth="200.0" progress="0.0" />
                                  </children>
                               </AnchorPane>

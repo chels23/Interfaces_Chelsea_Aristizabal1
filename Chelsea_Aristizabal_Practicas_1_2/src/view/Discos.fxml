@@ -29,27 +29,27 @@
                <children>
                   <ImageView fitHeight="138.0" fitWidth="129.0">
                      <image>
-                        <Image url="@../../../../../../../Downloads/abbey-road-the-beatles.jpg" />
+                        <Image url="@../img/abbey-road-the-beatles.jpg" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="140.0" fitWidth="127.0">
                      <image>
-                        <Image url="@../../../../../../../Downloads/harry_styles_fine_line-portada.jpg" />
+                        <Image url="@../img/harry_styles_fine_line-portada.jpg" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="140.0" fitWidth="127.0">
                      <image>
-                        <Image url="@../../../../../../../Downloads/taylor_swift_lover-portada.jpg" />
+                        <Image url="@../img/taylor_swift_lover-portada.jpg" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="140.0" fitWidth="127.0">
                      <image>
-                        <Image url="@../../../../../../../Downloads/61cY5+VfipL._SY355_.jpg" />
+                        <Image url="@../img/61cY5+VfipL._SY355_.jpg" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="140.0" fitWidth="127.0">
                      <image>
-                        <Image url="@../../../../../../../Downloads/15870570045353.jpg" />
+                        <Image url="@../img/15870570045353.jpg" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="140.0" fitWidth="127.0">
