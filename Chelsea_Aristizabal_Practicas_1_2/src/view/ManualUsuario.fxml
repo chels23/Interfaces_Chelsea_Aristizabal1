@@ -175,7 +175,7 @@
                               </ImageView>
                               <ImageView fitHeight="188.0" fitWidth="324.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../Downloads/menuprincipal.jpg" />
+                                    <Image url="@../img/menu.jpg" />
                                  </image>
                               </ImageView>
                            </children>
@@ -257,7 +257,7 @@
                                           </Text>
                                        </children>
                                     </VBox>
-                                    <TextArea layoutX="177.0" layoutY="47.0" prefHeight="83.0" prefWidth="294.0" text="Este botón contiene toda la información de artista &#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar.  Aqui solo funciona el botón de&#10;agregar&#10;" />
+                                    <TextArea layoutX="177.0" layoutY="47.0" prefHeight="83.0" prefWidth="294.0" text="Este botón contiene toda la información de artista &#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar.  &#10;" />
                                     <TextArea layoutX="177.0" layoutY="170.0" prefHeight="83.0" prefWidth="294.0" text="Este botón contiene toda la información de Discos&#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar.  Los botones no hacen niguna &#10;función." />
                                     <TextArea layoutX="177.0" layoutY="291.0" prefHeight="90.0" prefWidth="295.0" text="Este botón contiene toda la información de Podcast&#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar. " />
                                     <TextArea layoutX="177.0" layoutY="404.0" prefHeight="83.0" prefWidth="289.0" text="Contiene información de los Podcast más escuchados&#10;este botón solo muestra información. Todavia no&#10;se ha creado tabla para incluir en la base de datos " />
@@ -275,12 +275,12 @@
                      <children>
                         <ImageView fitHeight="106.0" fitWidth="393.0" layoutX="327.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Downloads/agregarmas.jpg" />
+                              <Image url="@../img/agregarmas.jpg" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="273.0" fitWidth="386.0" layoutX="327.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Downloads/form3.jpg" />
+                              <Image url="@../img/form3.jpg" />
                            </image>
                         </ImageView>
                         <Text layoutX="21.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Botón Agregar" wrappingWidth="141.13671875">
