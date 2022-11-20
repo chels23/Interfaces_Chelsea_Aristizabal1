@@ -6,7 +6,6 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -53,7 +52,7 @@
                                     <Text layoutX="18.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Al iniciar sesion solo el Administrador tendra acceso es el unico que puede añadir, editar y eliminar datos de la empresa." textAlignment="JUSTIFY" wrappingWidth="179.443359375" />
                                     <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="74.0" layoutY="32.0">
                                        <image>
-                                          <Image url="@../../../../../../../Downloads/settings_account_box_FILL0_wght400_GRAD0_opsz48.png" />
+                                          <Image url="@../img/settings_account_box_FILL0_wght400_GRAD0_opsz48.png" />
                                        </image>
                                     </ImageView>
                                     <Label layoutX="18.0" layoutY="24.0" prefHeight="32.0" prefWidth="11.0" text="1">
@@ -170,7 +169,7 @@
                            <children>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../Downloads/menuitems.jpg" />
+                                    <Image url="@../img/menuitems.jpg" />
                                  </image>
                               </ImageView>
                               <ImageView fitHeight="188.0" fitWidth="324.0" pickOnBounds="true" preserveRatio="true">
@@ -185,7 +184,6 @@
                               <Font name="System Bold Italic" size="18.0" />
                            </font>
                         </Text>
-                        <TextArea layoutX="16.0" layoutY="80.0" prefHeight="206.0" prefWidth="208.0" text="Cuando iniciamos sesión, &#10;esta ventana nos aparece.&#10;En la parte superior tenemos:&#10;Chat: No lleva ninguna ventana, &#10;pero su función es estar en linea &#10;con los compañeros y equipo&#10;de trabajo.&#10;Email: No lleva ninguna ventana, &#10;pero su función es conectarse con&#10;empresa mediante su correo&#10;" />
                         <Text layoutX="26.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estadisticas">
                            <font>
                               <Font name="System Bold Italic" size="18.0" />
@@ -198,11 +196,12 @@
                         </Text>
                         <ImageView fitHeight="249.0" fitWidth="326.0" layoutX="387.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Downloads/estadisticas.jpg" />
+                              <Image url="@../img/estadisticas.jpg" />
                            </image>
                         </ImageView>
-                        <TextArea layoutX="26.0" layoutY="350.0" prefHeight="112.0" prefWidth="215.0" text="En esta parte muestra las diferentes&#10;estadisticas en varios grupos, podemos&#10;ver los albums mas escuchados o las &#10;canciones." />
-                        <Text layoutX="142.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esta ventana es donde nos encontramos actualmente" />
+                        <Text layoutX="113.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esta ventana es donde nos encontramos actualmente" />
+                        <Label layoutX="14.0" layoutY="58.0" prefHeight="216.0" prefWidth="185.0" text="Cuando iniciamos sesión, esta ventana nos aparece.En la parte superior tenemos:Chat: No lleva ninguna ventana, pero su función es estar en linea con los compañeros y equipode trabajo.Email: No lleva ninguna ventana, pero su función es conectarse conempresa mediante su correo." wrapText="true" />
+                        <Label layoutX="26.0" layoutY="340.0" prefHeight="112.0" prefWidth="221.0" text="En esta parte muestra las diferentesestadisticas en varios grupos, podemosver los albums mas escuchados o las canciones." wrapText="true" />
                      </children>
                   </AnchorPane>
               </content>
@@ -217,7 +216,7 @@
                                  <children>
                                     <ImageView fitHeight="527.0" fitWidth="197.0" layoutX="1.0" layoutY="7.0">
                                        <image>
-                                          <Image url="@../../../../../../../Downloads/menulateral.jpg" />
+                                          <Image url="@../img/menulateral.jpg" />
                                        </image>
                                     </ImageView>
                                  </children>
@@ -257,10 +256,10 @@
                                           </Text>
                                        </children>
                                     </VBox>
-                                    <TextArea layoutX="177.0" layoutY="47.0" prefHeight="83.0" prefWidth="294.0" text="Este botón contiene toda la información de artista &#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar.  &#10;" />
-                                    <TextArea layoutX="177.0" layoutY="170.0" prefHeight="83.0" prefWidth="294.0" text="Este botón contiene toda la información de Discos&#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar.  Los botones no hacen niguna &#10;función." />
-                                    <TextArea layoutX="177.0" layoutY="291.0" prefHeight="90.0" prefWidth="295.0" text="Este botón contiene toda la información de Podcast&#10;Solo el Admin puede tener permisos de eliminar, &#10;registrar y editar. " />
-                                    <TextArea layoutX="177.0" layoutY="404.0" prefHeight="83.0" prefWidth="289.0" text="Contiene información de los Podcast más escuchados&#10;este botón solo muestra información. Todavia no&#10;se ha creado tabla para incluir en la base de datos " />
+                                    <Label layoutX="168.0" layoutY="14.0" prefHeight="106.0" prefWidth="437.0" text="Este botón contiene toda la información de artista Solo el Admin puede tener permisos de eliminar, registrar y editar.  " wrapText="true" />
+                                    <Label layoutX="168.0" layoutY="131.0" prefHeight="89.0" prefWidth="338.0" text="Este botón contiene toda la información de DiscosSolo el Admin puede tener permisos de eliminar, registrar y editar.  Los botones no hacen niguna función." wrapText="true" />
+                                    <Label layoutX="168.0" layoutY="220.0" prefHeight="132.0" prefWidth="335.0" text="Este botón contiene toda la información de PodcastSolo el Admin puede tener permisos de eliminar, registrar y editar. " wrapText="true" />
+                                    <Label layoutX="168.0" layoutY="314.0" prefHeight="169.0" prefWidth="333.0" text="Contiene información de los Podcast más escuchadoseste botón solo muestra información. Todavia nose ha creado tabla para incluir en la base de datos. " wrapText="true" />
                                  </children>
                               </AnchorPane>
                           </items>
@@ -293,8 +292,8 @@
                               <Font name="System Bold Italic" size="18.0" />
                            </font>
                         </Text>
-                        <TextArea layoutX="21.0" layoutY="60.0" prefHeight="133.0" prefWidth="247.0" text="Para agregar un nuevo artista y que &#10;aparezca en la tabla hay que pulsar&#10;el botón +" />
-                        <TextArea layoutX="21.0" layoutY="312.0" prefHeight="133.0" prefWidth="247.0" text="Después aparecera un dialogo con el&#10;formulario " />
+                        <Label layoutX="21.0" layoutY="79.0" prefHeight="73.0" prefWidth="171.0" text="Para agregar un nuevo artista y que aparezca en la tabla hay que pulsarel botón +" wrapText="true" />
+                        <Label layoutX="21.0" layoutY="286.0" text="Después aparecera un dialogo con el formulario ." wrapText="true" />
                      </children>
                   </AnchorPane>
               </content>
@@ -305,17 +304,17 @@
                      <children>
                         <ImageView fitHeight="275.0" fitWidth="371.0" layoutX="350.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Downloads/cambios.jpg" />
+                              <Image url="@../img/cambios.jpg" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="118.0" fitWidth="344.0" layoutX="353.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Downloads/guardado.jpg" />
+                              <Image url="@../img/guardado.jpg" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="149.0" fitWidth="347.0" layoutX="350.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Downloads/cambiotabla.jpg" />
+                              <Image url="@../img/cambiotabla.jpg" />
                            </image>
                         </ImageView>
                         <Text layoutX="32.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formulario" wrappingWidth="141.13671875">
@@ -333,9 +332,40 @@
                               <Font name="System Bold Italic" size="18.0" />
                            </font>
                         </Text>
-                        <TextArea layoutX="32.0" layoutY="109.0" prefHeight="95.0" prefWidth="222.0" text="Añade solo los campos&#10;Nombre, Email, Company y Biografía" />
-                        <TextArea layoutX="29.0" layoutY="304.0" prefHeight="65.0" prefWidth="228.0" text="Te aparecera un mensaje de que se insertado&#10;los campos" />
-                        <TextArea layoutX="29.0" layoutY="450.0" prefHeight="86.0" prefWidth="229.0" text="Finalmente se añadió correctamente" />
+                        <Text layoutX="22.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Añade solo los camposNombre, Email, Company y Biografía" />
+                        <Label layoutX="30.0" layoutY="278.0" prefHeight="70.0" prefWidth="161.0" text="Te aparecera un mensaje de que se insertadolos campos" wrapText="true" />
+                        <Label layoutX="30.0" layoutY="432.0" prefHeight="70.0" prefWidth="161.0" text="Finalmente se añadió correctamente" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Funciones">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="164.0" fitWidth="339.0" layoutX="19.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/filtrar.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="173.0" fitWidth="255.0" layoutX="427.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/listener.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="179.0" fitWidth="360.0" layoutX="19.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/eliminada.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="190.0" fitWidth="332.0" layoutX="404.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/seleccionar.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="22.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eliminar persona de la tabla." />
+                        <Text layoutX="420.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para poder eliminar debes seleccionar a la persona" />
+                        <Text layoutX="22.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrar cantante por nombre" />
                      </children>
                   </AnchorPane>
               </content>
