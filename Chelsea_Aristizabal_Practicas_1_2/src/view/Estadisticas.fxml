@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Pagination?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.SplitPane?>
@@ -34,20 +38,15 @@
                <children>
                   <TabPane layoutX="-4.0" prefHeight="394.0" prefWidth="442.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                      <Tab text="Géneros Múśicales">
+                      <Tab text="Géneros ">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <ImageView fitHeight="310.0" fitWidth="392.0" layoutX="11.0" layoutY="32.0">
-                                       <image>
-                                          <Image url="@../img/image001.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </AnchorPane>
+                                    <PieChart fx:id="pieChart" layoutX="8.0" layoutY="21.0" prefHeight="365.0" prefWidth="398.0" />
+                                 </children></AnchorPane>
                         </content>
                       </Tab>
-                      <Tab text="Top 10 Canciones">
+                      <Tab text="Canciones">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -56,13 +55,13 @@
                                           <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                                        </font>
                                     </Text>
-                                    <Pagination fx:id="pagination" layoutX="92.0" layoutY="117.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../../../Downloads/Unidad3_EjerciciosEventos_Dialogos/Unidad3_EjerciciosEventos_Dialogos/src/pagination/EstilosPaginacion.css" />
-                                    <ProgressBar fx:id="progressBar" layoutX="107.0" layoutY="329.0" prefWidth="200.0" progress="0.0" />
+                                    <Pagination fx:id="pagination" layoutX="92.0" layoutY="117.0" prefHeight="208.0" prefWidth="208.0" stylesheets="@../../../../../Downloads/Unidad3_EjerciciosEventos_Dialogos/Unidad3_EjerciciosEventos_Dialogos/src/pagination/EstilosPaginacion.css" />
+                                    <ProgressBar fx:id="progressBar" layoutX="92.0" layoutY="332.0" prefWidth="200.0" progress="0.0" />
                                  </children>
                               </AnchorPane>
                         </content>
                       </Tab>
-                        <Tab text="Álbumes Más Escuchados e">
+                        <Tab text="Álbumes">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -78,6 +77,21 @@
                                     </Text>
                                  </children>
                               </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Usuarios">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AreaChart fx:id="areaChart" layoutX="1.0" layoutY="8.0" prefHeight="355.0" prefWidth="408.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                 </children></AnchorPane>
                           </content>
                         </Tab>
                     </tabs>

@@ -2,10 +2,17 @@ package application;
 
 import java.util.ArrayList;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.VBox;
 
 public class EstadisticasController {
@@ -18,13 +25,38 @@ public class EstadisticasController {
 	
     private ArrayList<String> canciones = new ArrayList<String>();
     private static final int ITEMSPERPAGE = 5;
-   
-    
+	@FXML
+    private AreaChart<String, Integer> areaChart;
+	
+	@FXML
+    private PieChart pieChart;
     /**
      * 
      */
     @FXML
-    private void initialize() {   
+    private void initialize() {  
+    	
+    	initAreaChart();
+		// Rellenamos los datos del gráfico
+		ObservableList<PieChart.Data> valueList = FXCollections.observableArrayList(
+                new PieChart.Data("Pop", 80),
+                new PieChart.Data("Rap", 25),
+                new PieChart.Data("Hip-hop", 10),
+                new PieChart.Data("trap Latino", 22),
+                new PieChart.Data("R&B", 30));
+		
+		
+		pieChart.setData(valueList);
+		
+		//PieChart pieChart = new PieChart(valueList);
+		pieChart.setTitle("Albumn más escuchados");
+		pieChart.getData().forEach(data -> {
+		 String percentage = String.format("%.2f%%", (data.getPieValue() / 100));
+		 Tooltip toolTip = new Tooltip(percentage);
+		 toolTip.setStyle("-fx-background-color: gray; -fx-text-fill: whitesmoke;");
+		 Tooltip.install(data.getNode(), toolTip);
+		});
+
     	// Se inicializa el listado
     	this.initCanciones(this.canciones);
     	
@@ -47,6 +79,44 @@ public class EstadisticasController {
     	// Valor inicial de la barra de progreso
     	progressBar.setProgress((double) 1 / pagination.getPageCount()); 
     }
+	private void initAreaChart() {
+		// Para los AreaChart, SceneBuilder obliga a emplear un CategoryAxis cuyos valores deben ser String
+		// aunque sean números. Es posible indicar las categorías con el método setCategories de xAxis
+		// pero si no se indica se crea automáticamente según los datos de las series
+		areaChart.setTitle("Visitas en CloudsMusic");
+		// Se crean dos series con datos
+		XYChart.Series<String, Integer> seriesApril= new XYChart.Series<String, Integer>();
+		seriesApril.setName("2022");
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Enero", 4));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Febrero", 10));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("6", 15));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("9", 8));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("12", 5));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("15", 18));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("18", 15));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("21", 13));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("24", 19));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("27", 21));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("30", 21));
+        
+        XYChart.Series<String, Integer> seriesMay = new XYChart.Series<String, Integer>();
+        seriesMay.setName("2021");
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Enero", 20));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Febrero", 15));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("6", 13));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("9", 12));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("12", 14));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("15", 18));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("18", 25));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("21", 25));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("24", 23));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("27", 26));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("31", 26));
+        
+        // Se añaden las series al gráfico de tipo AreaChart
+        areaChart.getData().add(seriesApril);
+        areaChart.getData().add(seriesMay);
+	}
     
     private VBox createPage(int pageIndex) {        
         // Ítems por pagina

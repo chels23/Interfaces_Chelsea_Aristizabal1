@@ -144,7 +144,7 @@ public class MenuController implements Initializable {
 			// crear una escena que viene del padre
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-			
+			stage.setTitle("Formulario");
 	    	
 
 			// Modal hasta que no termine con el formulario no me deja volver a la ventana
@@ -377,7 +377,7 @@ public class MenuController implements Initializable {
 			// crear una escena que viene del padre
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
-
+			stage.setTitle("Manual");
 			// Modal hasta que no termine con el formulario no me deja volver a la ventana
 			// anterior
 			stage.initModality(Modality.APPLICATION_MODAL);
@@ -403,6 +403,7 @@ public class MenuController implements Initializable {
 			// crear una escena que viene del padre
 			Scene scene = new Scene(root);
 			Stage stage = new Stage();
+			stage.setTitle("Estadísticas");
 
 			// Modal hasta que no termine con el formulario no me deja volver a la ventana
 			// anterior
