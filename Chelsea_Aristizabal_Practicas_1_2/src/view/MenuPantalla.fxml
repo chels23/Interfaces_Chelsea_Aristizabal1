@@ -134,12 +134,12 @@
          <children>
           <AnchorPane layoutX="14.0" layoutY="164.0" minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="571.0">
                <children>
-                  <TableView fx:id="tblArtista" editable="true" layoutX="8.0" layoutY="11.0" prefHeight="300.0" prefWidth="555.0">
+                  <TableView fx:id="tblArtista" editable="true" layoutX="8.0" layoutY="11.0" prefHeight="300.0" prefWidth="563.0" stylesheets="@../resources/table-artistas.css">
                     <columns>
                       <TableColumn fx:id="colArt" prefWidth="127.0" text="NombreArtistico" />
-                      <TableColumn fx:id="colEmail" prefWidth="98.0" text="Email" />
-                        <TableColumn fx:id="colCompany" minWidth="0.0" prefWidth="112.0" text="Company" />
-                        <TableColumn fx:id="colBiografia" prefWidth="146.0" text="Biografia" />
+                      <TableColumn fx:id="colEmail" prefWidth="145.0" text="Email" />
+                        <TableColumn fx:id="colCompany" minWidth="0.0" prefWidth="124.0" text="Company" />
+                        <TableColumn fx:id="colBiografia" prefWidth="166.0" text="Biografia" />
                     </columns>
                   </TableView>
                </children>

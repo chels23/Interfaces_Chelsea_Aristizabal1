@@ -86,36 +86,50 @@ public class EstadisticasController {
 		areaChart.setTitle("Visitas en CloudsMusic");
 		// Se crean dos series con datos
 		XYChart.Series<String, Integer> seriesApril= new XYChart.Series<String, Integer>();
-		seriesApril.setName("2022");
+		seriesApril.setName("2020");
         seriesApril.getData().add(new XYChart.Data<String, Integer>("Enero", 4));
         seriesApril.getData().add(new XYChart.Data<String, Integer>("Febrero", 10));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("6", 15));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("9", 8));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("12", 5));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("15", 18));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("18", 15));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("21", 13));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("24", 19));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("27", 21));
-        seriesApril.getData().add(new XYChart.Data<String, Integer>("30", 21));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Marzo", 15));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Abril", 8));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Mayo", 5));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Junio", 18));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Julio", 15));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Agosto", 13));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Septiembre", 19));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Octubre", 21));
+        seriesApril.getData().add(new XYChart.Data<String, Integer>("Noviembre", 21));
         
         XYChart.Series<String, Integer> seriesMay = new XYChart.Series<String, Integer>();
         seriesMay.setName("2021");
         seriesMay.getData().add(new XYChart.Data<String, Integer>("Enero", 20));
         seriesMay.getData().add(new XYChart.Data<String, Integer>("Febrero", 15));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("6", 13));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("9", 12));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("12", 14));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("15", 18));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("18", 25));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("21", 25));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("24", 23));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("27", 26));
-        seriesMay.getData().add(new XYChart.Data<String, Integer>("31", 26));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Marzo", 13));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Abril", 12));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Mayo", 14));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Junio", 18));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Julio", 25));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Agosto", 25));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Septiembre", 23));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Octubre", 26));
+        seriesMay.getData().add(new XYChart.Data<String, Integer>("Noviembre", 26));
         
+        XYChart.Series<String, Integer> seriesAño1 = new XYChart.Series<String, Integer>();
+        seriesAño1.setName("2022");
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Enero", 30));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Febrero", 10));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Marzo", 8));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Abril", 14));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Mayo", 14));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Junio", 22));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Julio", 25));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Agosto", 25));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Septiembre", 38));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Octubre", 29));
+        seriesAño1.getData().add(new XYChart.Data<String, Integer>("Noviembre", 29));
         // Se añaden las series al gráfico de tipo AreaChart
         areaChart.getData().add(seriesApril);
         areaChart.getData().add(seriesMay);
+        areaChart.getData().add(seriesAño1);
 	}
     
     private VBox createPage(int pageIndex) {        
