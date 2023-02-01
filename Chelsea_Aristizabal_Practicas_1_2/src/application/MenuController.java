@@ -402,7 +402,9 @@ public class MenuController implements Initializable {
 
 			// crear una escena que viene del padre
 			Scene scene = new Scene(root);
+			
 			Stage stage = new Stage();
+			scene.getStylesheets().add("resources/estadisticas.css");
 			stage.setTitle("Estadísticas");
 
 			// Modal hasta que no termine con el formulario no me deja volver a la ventana

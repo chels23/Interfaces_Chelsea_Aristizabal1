@@ -37,15 +37,21 @@ public class LoginController {
 			// Cargo la vista
 			try {
 				Node source = (Node) event.getSource();
-				Stage stage = (Stage) source.getScene().getWindow();
+				Stage stage = (Stage) source.getScene().getWindow();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 				// Cargamos el ARCHIVO
 				FXMLLoader loader = new FXMLLoader();
+				
 				loader.setLocation(MenuController.class.getResource("/view/MenuPantalla.fxml"));
+				
+				//stage=FXMLLoader.load(getClass().getClassLoader().getResource("/resources/menuPantalla.css"));
 				rootLayout = (BorderPane) loader.load();
 				stage.setTitle("Menu");
+				
 				MenuController menuCon = loader.getController();
+				
 				menuCon.setRoot1(rootLayout);
 				Scene scene = new Scene(rootLayout);
+			
 				stage.setScene(scene);
 				stage.show();
 				// Se sitúa en el centro del diseño principal
@@ -58,7 +64,7 @@ public class LoginController {
 
 			try {
 				// Cargo la vista
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ManualUsuario.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/PerfilUsuario.fxml"));
 
 				// Cargo la ventana
 				Parent root = loader.load();

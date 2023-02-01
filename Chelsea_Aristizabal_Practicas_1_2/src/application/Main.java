@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -20,6 +20,11 @@ public class Main extends Application {
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("CloudsMusic");
+			// set icon 
+			primaryStage.getIcons().add(new Image("/img/iconomus.png"));
+
+			
+			scene.getStylesheets().add("resources/login.css");
 			
 			primaryStage.show();
 		} catch (Exception e) {

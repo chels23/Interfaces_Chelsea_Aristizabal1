@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+<BorderPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../resources/login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <center>
       <GridPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: white;">
          <columnConstraints>
@@ -28,7 +28,7 @@
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ADD8E6;" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <VBox id="izquierda" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
                   <Label text="Bienvenido a CloudsMusic" textAlignment="CENTER" wrapText="true">
                      <font>
@@ -50,7 +50,7 @@
                   </ImageView>
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+            <VBox id="derecha" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
                   <Label text="Iniciar sesión">
                      <font>
@@ -113,12 +113,12 @@
                   </VBox>
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="btnIngresar" mnemonicParsing="false" onAction="#Ingresar" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #4682B4;" text="Ingresar" textFill="WHITE">
+                        <Button id="btn1" fx:id="btnIngresar" mnemonicParsing="false" onAction="#Ingresar" prefHeight="35.0" prefWidth="100.0" text="Ingresar" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #4682B4;" text="Registrase" textFill="WHITE">
+                        <Button id="btn2" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Registrase" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>

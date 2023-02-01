@@ -1,0 +1,32 @@
+/* Estilo de la sección izquierda y sus elementos */
+.root{
+	-fx-font-size: 18px;
+	-fx-font-style: italic ;
+	
+}
+#izquierda{
+	-fx-background-color: #abd4fb;
+	-fx-text-fill: #0c5c98;
+
+}
+
+
+/* Estilo para botón con ID boton1 */
+#btn1 { 
+    -fx-text-fill: #fefffe; 
+    -fx-background-color: #1379e3;
+}
+#btn1:hover { 
+	-fx-background-color: #c8cff2;
+	-fx-text-fill: #42a2d3;
+	-fx-border-color: #002c4d;
+    -fx-border-width: 2;
+	-fx-border-radius:5; 
+}
+/* Estilo para botón con ID boton2 */
+#btn2 { 
+    -fx-text-fill: blueviolet; 
+}
+#derecha{
+	
+}
