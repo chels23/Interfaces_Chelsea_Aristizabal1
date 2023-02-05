@@ -72,7 +72,8 @@ public class LoginController {
 				// crear una escena que viene del padre
 				Scene scene = new Scene(root);
 				Stage stage = new Stage();
-				stage.setTitle("Estadísticas");
+				stage.setTitle("Mi perfil");
+				scene.getStylesheets().add("resources/PerfilUsuario.css");
 
 		
 				stage.setScene(scene);
