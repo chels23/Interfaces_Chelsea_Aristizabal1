@@ -2,11 +2,7 @@ package registro;
 
 import java.util.Objects;
 
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.Slider;
+
 
 /**
  * 

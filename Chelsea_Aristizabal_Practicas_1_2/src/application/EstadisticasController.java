@@ -6,7 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.AreaChart;
-import javafx.scene.chart.NumberAxis;
+
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
@@ -14,7 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.Tooltip;
-import javafx.scene.image.Image;
+
 import javafx.scene.layout.VBox;
 /**
  * Controlador para los graficos de estadisticaS
@@ -141,6 +141,7 @@ public class EstadisticasController {
 		areaChart.getData().add(seriesApril);
 		areaChart.getData().add(seriesMay);
 		areaChart.getData().add(seriesAño1);
+		
 	}
 
 	private VBox createPage(int pageIndex) {
@@ -215,6 +216,7 @@ public class EstadisticasController {
         // Se añaden las series al gráfico de tipo AreaChart
         stackedAreaChart.getData().add(ganancias2023);
         stackedAreaChart.getData().add(ganaciasActuales);
+        stackedAreaChart.setTitle("Ganancias en CloudsMusic");
 	}
 
 }

@@ -15,10 +15,15 @@
  
  /* Estilos del texto con la etiqueta de datos */
 .chart-pie-label {
-    -fx-fill: red;
-    -fx-font-size: 0.8em;
+    -fx-fill: black;
+    -fx-font-size: 0.9em;
 } 
-
+TabPane{
+	-fx-background-color: #1b164a;
+}
+AnchorPane{
+	-fx-background-color: #feffff;
+}
 /* Estilos del recuadro con la leyenda de los datos */
 
 .chart-legend-item-symbol {
@@ -33,7 +38,13 @@
     -fx-border-radius: 4px;
 }
 .chart{
-	-fx-background-color: red;
+	-fx-background-color: #ffdde5;
+	-fx-background-insets: 0, 30, 60, 80;
+   
+    -fx-border-color: #e28655; /* set border to red*/
+    -fx-border-insets: 5, 40, 60, 80;
+  
+    -fx-border-width: 3; /* border width 3px */
 }
 
 /* Se cambia el primer símbolo de la leyenda del gráfico */
