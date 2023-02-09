@@ -25,7 +25,11 @@ import javafx.scene.control.Alert.AlertType;
 
 import javafx.stage.Stage;
 import registro.Artista;
-
+/**
+ * Controlador de Artista para ver
+ * @author chelsea
+ *
+ */
 public class ArtistaController implements Initializable {
 
 	@FXML

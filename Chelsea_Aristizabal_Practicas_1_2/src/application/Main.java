@@ -6,7 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
+/**
+* Clase Main donde se inicia la aplicación
+*
+* @author chelsea DAM
+* @version 1.0
+*
+*/
 public class Main extends Application {
 
 	@Override
@@ -21,7 +27,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("CloudsMusic");
 			// set icon 
-			primaryStage.getIcons().add(new Image("/img/iconomus.png"));
+			primaryStage.getIcons().add(new Image("/img/musicalog.jpg"));
 
 			
 			scene.getStylesheets().add("resources/login.css");

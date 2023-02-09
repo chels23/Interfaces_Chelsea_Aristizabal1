@@ -73,7 +73,7 @@ public class LoginController {
 				Scene scene = new Scene(root);
 				Stage stage = new Stage();
 				stage.setTitle("Mi perfil");
-				scene.getStylesheets().add("resources/PerfilUsuario.css");
+				scene.getStylesheets().add("resources/perfilusuario.css");
 
 		
 				stage.setScene(scene);
@@ -110,7 +110,13 @@ public class LoginController {
 //			// Se sitúa en el centro del diseño principal
 
 	}
-	
+	/**
+	* Getter para que los controladores accedan al Stage con la ventana
+	* principal
+	*
+	* @return El Stage con la ventana principal
+	*/
+
 
 	public AnchorPane getRootLayout2() {
 		return rootLayout2;

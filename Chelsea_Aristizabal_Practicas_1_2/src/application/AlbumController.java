@@ -7,7 +7,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import registro.Banda;
-
+/**
+ * Controlador de Album para la tabla de album
+ * @author chelsea
+ *
+ */
 
 public class AlbumController {
 

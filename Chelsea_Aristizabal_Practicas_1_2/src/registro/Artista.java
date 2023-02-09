@@ -12,7 +12,7 @@ import javafx.scene.control.Slider;
  * 
  * Clase auxiliar que se empleará para el modelo de datos del TableView
  * 
- * @author SBF
+ * @author chelsea DAM2
  * 
  */
 public class Artista {
@@ -32,6 +32,17 @@ public class Artista {
     private String company;
     //private ChoiceBox generomusical;
     private String biografia;
+    
+    /**
+    * Constructor con nombre email, company y biografia
+    *
+    * @param nombreArtistico Nombre del artista
+    * @param email correo electronico del artista
+    * @param company las disquera del artista
+    * @param biografia pequeña descripcion del artista
+    * 
+    */
+
 	public Artista(String nombreArtistico, String email,  String company, String biografia) {
 		super();
 		NombreArtistico = nombreArtistico;

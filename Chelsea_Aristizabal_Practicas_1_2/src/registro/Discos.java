@@ -1,7 +1,13 @@
 package registro;
 
 
-
+/**
+ * 
+ * Clase auxiliar que se empleará para el modelo de datos del TableView
+ * 
+ * @author chelsea DAM2
+ * 
+ */
 public class Discos {
 	
 

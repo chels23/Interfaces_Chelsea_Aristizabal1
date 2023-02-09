@@ -1,32 +1,71 @@
 /* Estilo de la sección izquierda y sus elementos */
 .root{
-	-fx-font-size: 18px;
+	-fx-font-size: 15px;
 	-fx-font-style: italic ;
+	-fx-font-weight: bold;
+	-fx-font-family:sans-serif;
+
 	
 }
 #izquierda{
-	-fx-background-color: #abd4fb;
+	-fx-background-color: #f5f5f5;
 	-fx-text-fill: #0c5c98;
+	-fx-background-image: url("iconodefi.jpg");
+	-fx-background-insets: 0, 30, 60, 80;
+   
+    -fx-border-color: #04ADDC; /* set border to red*/
+    -fx-border-insets: 5, 40, 60, 80;
+  
+    -fx-border-width: 3; /* border width 3px */
 
+
+}
+.label {
+ -fx-text-fill: black;
+ -fx-font-size: 15px;
+
+} 
+.check-box:selected{
+	-fx-text-fill: white;
+	-fx-background-color: green;	
 }
 
 
+#titulo{
+	-fx-font-size: 25px;
+}
 /* Estilo para botón con ID boton1 */
 #btn1 { 
-    -fx-text-fill: #fefffe; 
-    -fx-background-color: #1379e3;
+  -fx-text-fill: #36c0ee; 
+    -fx-background-color: white;
+    -fx-border-color: #63E4FB;
+      -fx-border-width: 2;
+    -fx-border-radius:5; 
 }
 #btn1:hover { 
-	-fx-background-color: #c8cff2;
-	-fx-text-fill: #42a2d3;
-	-fx-border-color: #002c4d;
+	-fx-background-color: #142A3A;
+	-fx-text-fill: white;
+	-fx-border-color: white;
     -fx-border-width: 2;
 	-fx-border-radius:5; 
 }
 /* Estilo para botón con ID boton2 */
 #btn2 { 
-    -fx-text-fill: blueviolet; 
+    -fx-text-fill: #36c0ee; 
+    -fx-background-color: white;
+    -fx-border-color: #63E4FB;
+      -fx-border-width: 2;
+    -fx-border-radius:5; 
+}
+#btn2:hover { 
+	-fx-background-color: #142A3A;
+	-fx-text-fill: white;
+	-fx-border-color: white;
+    -fx-border-width: 2;
+	-fx-border-radius:5; 
 }
 #derecha{
+	-fx-background-color: #89DCF0;
+
 	
 }

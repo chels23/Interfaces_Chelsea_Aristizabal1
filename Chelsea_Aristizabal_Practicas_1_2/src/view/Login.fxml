@@ -30,11 +30,11 @@
          <children>
             <VBox id="izquierda" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <children>
-                  <Label text="Bienvenido a CloudsMusic" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font name="System Bold Italic" size="30.0" />
-                     </font>
-                  </Label>
+                  <ImageView fitHeight="59.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/iconodefi.jpg" />
+                     </image>
+                  </ImageView>
                   <HBox alignment="CENTER">
                      <VBox.margin>
                         <Insets top="50.0" />
@@ -43,21 +43,12 @@
                         <Insets left="40.0" right="40.0" />
                      </padding>
                   </HBox>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/iconomus.png" />
-                     </image>
-                  </ImageView>
                </children>
             </VBox>
             <VBox id="derecha" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
-                  <Label text="Iniciar sesión">
-                     <font>
-                        <Font name="System Bold Italic" size="30.0" />
-                     </font>
-                  </Label>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
+                  <Text id="titulo" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar Sesion" />
+                  <VBox id="t" prefHeight="200.0" prefWidth="100.0">
                      <children>
                         <GridPane alignment="CENTER" VBox.vgrow="ALWAYS">
                           <columnConstraints>

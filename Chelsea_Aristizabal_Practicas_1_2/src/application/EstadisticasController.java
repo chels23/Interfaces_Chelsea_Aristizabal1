@@ -8,17 +8,25 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.StackedAreaChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
-
+/**
+ * Controlador para los graficos de estadisticaS
+ * @author chelsea
+ *
+ */
 public class EstadisticasController {
 
 	@FXML
 	private Pagination pagination;
+    @FXML
+    private StackedAreaChart<Integer, Integer> stackedAreaChart;
 
 	@FXML
 	private ProgressBar progressBar;
@@ -38,6 +46,11 @@ public class EstadisticasController {
 	private void initialize() {
 
 		initAreaChart();
+		// --------------------------------- STACKED AREA CHART ----------------------------------------------------
+		initStackedAreaChart();
+		
+		// ---------------------------------  	PIE CHART ----------------------------------------------------
+
 		// Rellenamos los datos del gráfico
 		ObservableList<PieChart.Data> valueList = FXCollections.observableArrayList(new PieChart.Data("Pop", 80),
 				new PieChart.Data("Rap", 25), new PieChart.Data("Hip-hop", 10), new PieChart.Data("trap Latino", 22),
@@ -53,6 +66,7 @@ public class EstadisticasController {
 			toolTip.setStyle("-fx-background-color: gray; -fx-text-fill: whitesmoke;");
 			Tooltip.install(data.getNode(), toolTip);
 		});
+		// ---------------------------------  	PAGINATION ----------------------------------------------------
 
 		// Se inicializa el listado
 		this.initCanciones(this.canciones);
@@ -147,6 +161,8 @@ public class EstadisticasController {
 
 		return box;
 	}
+	
+	//para pagination
 
 	private void initCanciones(ArrayList<String> canciones) {
 		canciones.add("La bachata Manuel Turizo ");
@@ -160,7 +176,45 @@ public class EstadisticasController {
 		canciones.add("CUFF IT Beyonce ");
 		canciones.add("Monotonia Shakira");
 		canciones.add("Die For You Joji");
-
+		
+	}
+	
+	private void initStackedAreaChart() {
+		// Para los StackedAreaChart, SceneBuilder obliga a emplear dos NumberAxis cuyos valores deben 
+		// ser Number o tipos que heredan de este
+		
+		// Se crean dos series con datos
+		XYChart.Series<Integer, Integer> ganancias2023 = new XYChart.Series<Integer, Integer>();
+		ganancias2023.setName("Enero");
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(1, 4));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(3, 10));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(6, 15));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(9, 8));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(12, 5));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(15, 18));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(18, 15));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(21, 13));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(24, 19));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(27, 21));
+		ganancias2023.getData().add(new XYChart.Data<Integer, Integer>(30, 21));
+        
+        XYChart.Series<Integer, Integer> ganaciasActuales = new XYChart.Series<Integer, Integer>();
+        ganaciasActuales.setName("Actualmente");
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(1, 20));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(3, 15));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(6, 13));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(9, 12));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(12, 14));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(15, 18));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(18, 25));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(21, 25));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(24, 23));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(27, 26));
+        ganaciasActuales.getData().add(new XYChart.Data<Integer, Integer>(31, 26));
+        
+        // Se añaden las series al gráfico de tipo AreaChart
+        stackedAreaChart.getData().add(ganancias2023);
+        stackedAreaChart.getData().add(ganaciasActuales);
 	}
 
 }

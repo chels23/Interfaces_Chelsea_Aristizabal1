@@ -31,7 +31,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import registro.Artista;
 
-
+/**
+ * Controlador ddel inicio de sesion del admin
+ * @author chelsea
+ *
+ */
 public class MenuController implements Initializable {
 
 	private BorderPane root1;
