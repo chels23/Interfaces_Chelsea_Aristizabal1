@@ -6,7 +6,7 @@ import java.util.Objects;
 
 /**
  * 
- * Clase auxiliar que se empleará para el modelo de datos del TableView
+ * Clase auxiliar que se emplear para el modelo de datos del TableView
  * 
  * @author chelsea DAM2
  * 
@@ -35,7 +35,7 @@ public class Artista {
     * @param nombreArtistico Nombre del artista
     * @param email correo electronico del artista
     * @param company las disquera del artista
-    * @param biografia pequeña descripcion del artista
+    * @param biografia pequeï¿½a descripcion del artista
     * 
     */
 

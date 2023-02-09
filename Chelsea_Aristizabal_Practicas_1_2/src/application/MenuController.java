@@ -29,6 +29,9 @@ import javafx.scene.layout.BorderPane;
 
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+/**
+* Contiene el el modelo Artista
+*/
 import registro.Artista;
 
 /**
@@ -99,7 +102,7 @@ public class MenuController implements Initializable {
     	    new Artista("Burna Boy",         "michael.brown@example.com", "Epic Records.",""),
     	    new Artista("Jazmine Sullivan",  "michael.brown@example.com", "Island Records.",""),
     	    new Artista("Snoh Aalegra",      "michael.brown@example.com",  "Universal Music Group",""),
-    	    new Artista("Kiana Ledé",        "michael.brown@example.com", "Warner Bros. Records","")
+    	    new Artista("Kiana Leda",        "michael.brown@example.com", "Warner Bros. Records","")
     	    
     	);
 	
@@ -161,7 +164,7 @@ public class MenuController implements Initializable {
 			Artista a = controlador.getArtista();
 			if (a != null) {
 
-				// Añado la persona
+				// Agrego la persona
 				this.artistas.add(a);
 
 				// Refresco la tabla
@@ -304,7 +307,7 @@ public class MenuController implements Initializable {
 			Scene scene = new Scene(root1);
 			stage.setScene(scene);
 			stage.show();
-			// Se sitúa en el centro del diseño principal
+			// 
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -313,7 +316,7 @@ public class MenuController implements Initializable {
 
 	@FXML
 	private void abrirDiscos(ActionEvent event) throws IOException {
-		// Cargamos el archivo Controles Dinámicos
+		// Cargamos el archivo Controles Dinamicos
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuController.class.getResource("/view/Discos.fxml"));
 	    AnchorPane root = (AnchorPane) loader.load();
@@ -337,12 +340,12 @@ public class MenuController implements Initializable {
 	@FXML
 	void abrirUsuarios(ActionEvent event) {
 		try {
-			// Cargamos el archivo Controles Dinámicos
+			// Cargamos el archivo Controles Dinamicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MenuController.class.getResource("/view/Podcast.fxml"));
 			AnchorPane lisr = (AnchorPane) loader.load();
 
-			// Se sitúa en el centro del diseño principal
+			
 			root1.setCenter(lisr);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -355,12 +358,12 @@ public class MenuController implements Initializable {
 	@FXML
 	void abrirbandas(ActionEvent event) {
 		try {
-			// Cargamos el archivo Controles Dinámicos
+			// Cargamos el archivo Controles Dinamicos
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MenuController.class.getResource("/view/Bandas.fxml"));
 			AnchorPane lis = (AnchorPane) loader.load();
 
-			// Se sitúa en el centro del diseño principal
+	
 			root1.setCenter(lis);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -413,7 +416,7 @@ public class MenuController implements Initializable {
 			scene.getStylesheets().add("resources/estadisticas.css");
 			
 			//scene.getStylesheets().add("resources/estadisticas.css");
-			stage.setTitle("Estadísticas");
+			stage.setTitle("Estadï¿½sticas");
 
 			// Modal hasta que no termine con el formulario no me deja volver a la ventana
 			// anterior

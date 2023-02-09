@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+/**
+* Contiene el el modelo banda
+*/
 import registro.Banda;
 /**
  * Controlador de Album para la tabla de album

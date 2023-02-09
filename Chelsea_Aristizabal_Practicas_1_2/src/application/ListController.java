@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+/**
+* Contiene el el modelo Discos
+*/
 import registro.Discos;
 
 public class ListController {
@@ -24,8 +27,8 @@ public class ListController {
 
 	// Lista auxiliar para TableView
 	private ObservableList<Discos> data = FXCollections.observableArrayList(
-			new Discos("Speak Now", 20, "Taylor Swift", "Su tercer disco, 'Speak Now', llegó en 2010 con singles como ‘Mean’, ‘Mine’ o ‘Back to December’, logrando vender millón y medio de copias en su primera"),
-			new Discos(" Thriller", 23, "Michael Jackson", "La historia que relatan los versos es la de un chico que lleva al cine a su novia para ver una película de miedo"),
+			new Discos("Speak Now", 20, "Taylor Swift", ""),
+			new Discos(" Thriller", 23, "Michael Jackson", "La historia que relatan los versos es la de un chico que lleva al cine a su novia para ver una pelicula de miedo"),
 			new Discos("The Dark Side of the Moon", 33, "Pink Floyd", ""),
 			new Discos("guardaespaldas", 45, "Whitney Houston", ""),
 			new Discos("Bat out of Hell", 45, "Meat Loaf", ""),

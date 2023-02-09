@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 /**
-* Clase Main donde se inicia la aplicación
+* Clase Main donde se inicia la aplicacion
 *
 * @author chelsea DAM
 * @version 1.0

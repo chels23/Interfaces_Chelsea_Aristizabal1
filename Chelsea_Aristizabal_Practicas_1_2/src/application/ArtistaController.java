@@ -24,6 +24,9 @@ import javafx.scene.text.Text;
 
 
 import javafx.stage.Stage;
+/**
+* Contiene el el modelo artista
+*/
 import registro.Artista;
 /**
  * Controlador de Artista para ver
@@ -75,14 +78,14 @@ public class ArtistaController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// Controles de JavaFX a los que se añaden directamente los items
-		combo1.getItems().addAll("España", "Colombia", "Italia", "Alemania", "EEUU", "Ecuador", "China", "Japón",
+		// Controles de JavaFX a los que se aÃ±aden directamente los items
+		combo1.getItems().addAll("EspaÃ±a", "Colombia", "Italia", "Alemania", "EEUU", "Ecuador", "China", "JapÃ³n",
 				"Australia");
 
 		choice1.getItems().addAll("Pop", "Rock", "Jazz", "R&B", "Electronic", "KPOP", "Salsa", "Bachata", "Blues");
-		choice1.setValue("Selecciona Género Musical...");
+		choice1.setValue("Selecciona GÃ©nero Musical...");
 
-		// Cualquier nueva selección del usuario se registra en el texto de debajo
+		// Cualquier nueva selecciÃ³n del usuario se registra en el texto de debajo
 		combo1.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
 			txtResultado.setText("Antiguo -> " + oldValue + "\n" + "Nuevo -> " + newValue);
 		});
@@ -149,7 +152,7 @@ public class ArtistaController implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText(null);
                 alert.setTitle("Informacion");
-                alert.setContentText("Se ha añadido correctamente");
+                alert.setContentText("Se ha aÃ±adido correctamente");
                 alert.showAndWait();
  
             }

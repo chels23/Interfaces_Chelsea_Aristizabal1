@@ -74,7 +74,7 @@
       </Text>
       <FlowPane layoutX="38.0" layoutY="104.0" prefHeight="210.0" prefWidth="571.0">
          <children>
-            <TableView fx:id="tableBandas" prefHeight="210.0" prefWidth="573.0">
+            <TableView fx:id="tableBandas" prefHeight="210.0" prefWidth="573.0" stylesheets="@../resources/table-artistas.css">
               <columns>
                 <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
                 <TableColumn fx:id="colFechaInicio" prefWidth="127.0" text="FechaInicio" />

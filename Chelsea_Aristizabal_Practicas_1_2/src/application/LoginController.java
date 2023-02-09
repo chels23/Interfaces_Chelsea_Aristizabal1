@@ -16,7 +16,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class LoginController {
-	// Pantalla principal en la que se añade o quita contenido
+	// Pantalla principal en la que se agregade o quita contenido
 	private BorderPane rootLayout;
 	private AnchorPane rootLayout2;
 
@@ -54,7 +54,7 @@ public class LoginController {
 			
 				stage.setScene(scene);
 				stage.show();
-				// Se sitúa en el centro del diseño principal
+				// Se situ en elo principal
 
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -107,7 +107,7 @@ public class LoginController {
 //			
 //		
 //			appstage.show();
-//			// Se sitúa en el centro del diseño principal
+//			
 
 	}
 	/**

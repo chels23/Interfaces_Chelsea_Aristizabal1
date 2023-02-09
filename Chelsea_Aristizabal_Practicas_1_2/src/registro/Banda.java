@@ -1,7 +1,7 @@
 package registro;
 /**
  * 
- * Clase auxiliar que se empleará para el modelo de datos del TableView
+ * Clase auxiliar que se emplear para el modelo de datos del TableView
  * 
  * @author chelsea DAM2
  * 
@@ -14,6 +14,8 @@ public class Banda {
     private String Historia;
     private Integer NumIntegrantes;
     private String Productor;
+    
+    
     
 	public Banda(String nombreBanda, String fechaInicio, String historia, Integer numIntegrantes, String productor) {
 		
@@ -62,6 +64,14 @@ public class Banda {
 
 	public void setProductor(String productor) {
 		Productor = productor;
+	}
+	/**
+	* @deprecated En desuso para emplear el constructor con parametros
+	* solo usaremos la tabla artista
+	* Constructor por defecto
+	*/
+	public Banda() {
+		super();
 	}
     
 

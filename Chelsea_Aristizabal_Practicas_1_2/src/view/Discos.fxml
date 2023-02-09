@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #D3E2EF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListController">
    <children>
-      <TableView fx:id="tableDiscos" layoutX="51.0" layoutY="85.0" prefHeight="248.0" prefWidth="558.0">
+      <TableView fx:id="tableDiscos" layoutX="51.0" layoutY="85.0" prefHeight="248.0" prefWidth="558.0" stylesheets="@../resources/table-artistas.css">
         <columns>
           <TableColumn fx:id="colNombreDisco" prefWidth="141.0" text="Nombre" />
           <TableColumn fx:id="colPrecio" minWidth="9.0" prefWidth="73.0" text="Precio" />
